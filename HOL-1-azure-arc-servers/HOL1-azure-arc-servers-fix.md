@@ -64,7 +64,7 @@ Hyper-V is Microsoft's hardware virtualization product. It lets you create and r
 
    ![](.././media/subscription.png "Guest VMs")
 
-1. Now scroll down from the left side menu and select ** Resource Providers** under Settings.
+1. Now scroll down from the left side menu and select **Resource Providers** under Settings.
 
    ![](.././media/rp.png "Guest VMs")
    
@@ -116,20 +116,19 @@ Now, let's onboard the Linux VMs and local Kubernetes cluster to Azure Arc. So, 
       ```
     
     ![](.././media/root-login.png "Root Login")
-    
- 1. Run the below commands to upgrade the az packages and az module. 
+
+1. Run the below commands to upgrade the az packages and az module. 
    
      ```
-      curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
-      python3 get-pip.py
-      apt install pip
-      python3 get-pip.py
-      python3 -m pip install -U pip
-      python3 -m pip install --upgrade pip --target /opt/az/lib/python3.6/site-packages/
-      az upgrade -y
-      init 6
-    ```
-
+     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py python3 get-pip.py
+     apt install pip
+     python3 get-pip.py
+     python3 -m pip install -U pip
+     python3 -m pip install --upgrade pip --target /opt/az/lib/python3.6/site-packages/
+     az upgrade -y
+     init 6
+     ```
+     
 1. Open a new Putty session, re-perform the steps from step-2 to step-4 of the same task to get the upgraded packages and then continue from  step-7.
 
 1. There is file `installArcAgentLinux.txt` on ARCHOST VM desktop 💻. Open the file and copy the first 7 lines and paste in putty to declare the values of AppID, AppSecret, TenantID, SubscriptionID, ResourceGroup, and location, and then log into azure using the 7th line. You can also find the values of these variables in the **Environment Details** tab and then use them in the next steps.
@@ -178,9 +177,9 @@ Now, let's onboard the Linux VMs and local Kubernetes cluster to Azure Arc. So, 
    
 ## Task 4: Onboard Kubernetes Cluster to Azure Arc
 
-We have onboarded the Linux VM to Azure Arc and verified in task 2. Now, you will onboard the local Kubernetes cluster to Azure Arc. So, here we onboard **MicroK8s** Kubernetes cluster to Azure Arc which is hosted on **ubuntu-k8s** VM. We alreaddy have the Microk8s Kubernetes cluster ready and configured, and also Arc enabled CLI extensions are installed.
+We have onboarded the Linux VM to Azure Arc and verified in task 3. Now, you will onboard the local Kubernetes cluster to Azure Arc. So, here we onboard **MicroK8s** Kubernetes cluster to Azure Arc which is hosted on **ubuntu-k8s** VM. We alreaddy have the Microk8s Kubernetes cluster ready and configured, and also Arc enabled CLI extensions are installed.
 
-   > **Note** : If you have closed the putty after completing **task 2**, then perform the first 6 steps of task 2 again and then return to perform this task. Make sure that you perform all steps with root user in ubuntu-k8s vm.
+   > **Note** : If you have closed the putty after completing **task 3**, then perform the first 6 steps of task 3 again and then return to perform this task. Make sure that you perform all steps with root user in ubuntu-k8s vm.
 
 1. Install helm using following commands:
 
@@ -228,8 +227,8 @@ We have onboarded the Linux VM to Azure Arc and verified in task 2. Now, you wil
    cd ..
    ```
 
-   ![](.././media/kube.png "kube")
-    
+   ![](.././media/kube.png "kube") 
+
 1. Connect the Kubernetes cluster to Azure Arc by executing the following command. This command will take few minutes to onboard Kubernetes cluster to Azure Arc.
 
    ```
@@ -277,7 +276,7 @@ Policies can be applied to Arc enabled servers the same way they are applied to 
     
 1. Select **Servers** from the options on the Azure Arc blade.
 
-    ![](.././media/select-servers.png)
+    ![](.././media/azure-arc-server.png)
     
 1. Explore the **ubuntu-k8s** server from connected machines. 
 
@@ -303,14 +302,48 @@ Policies can be applied to Arc enabled servers the same way they are applied to 
 
     ![](.././media/basic-nextv2.png)
     
-1. Under the **Log Analytics Workspace**, select the existing workspace with prefix **LogAnalyticsWS-** from the available list and then click on **Next**.
+1. Under the **Log Analytics Workspace**, select the existing workspace with the name **LogAnalyticWS-<inject key="DeploymentID/Suffix" enableCopy="false" />** from the available list and then click on **Next**.
 
     ![](.././media/select-existing-wsv2.png)
+    
+      >**Note:-  If you are having any issue while selecting the LogAnaltics from the dropdown then please follow the below steps or else skip to step 18.**
+       
+1. Search for the Policy in Search box and select **Definations** under **Authoring** section in policy.
+     
+    ![](.././media/policyfix.png)
+    
+1. Now search for the **Deploy Log Analytics extension for Linux VM** policy and select the policy from the list.
 
+    ![](.././media/policyfix2.png)
+        
+1. Now click on the **dupilcate defination** button.
+
+    ![](.././media/policyfix3.png)
+            
+1. Now the policy creation window will open, please enter the below details:
+         
+      * Under **Defination Location**: Select your available Azure Subscription.
+      * Name: Leave default
+      * Description: Leave default
+      * Category: Leave default as Monitoring.     
+       
+        ![](.././media/policyfix5.png)
+
+1. Now under Policy Rule, Remove the **"Strong type":"omsworkspace"** the line and click on save button.
+    
+    ![](.././media/policyfix4.png)           
+            
+1. After clicking on Save buttong you will be redirected to the policy page, Now click on **Assign** button.
+       
+1. Now on the **Basics** leave everything default and click on next.
+       
+1. Now on the Parameters section enter you Log Analytics Workspace name and click on **Next** button.
+            
+    ![](.././media/policyfix7.png) 
+           
 1. On the **Remediation** blade, enable the checkbox for **Create a remediation task** and then click on the **Next** button.
 
-    ![](.././media/remediation-next.png)
-    
+    ![](.././media/remediation-next.png)       
 1. On **Non-compliance messages** blade, enter following message ```Log Analytics agent is not installed```. This message will be displayed when linux machine will be non compliant. Now, click on teh **Review + create**.
 
     ![](.././media/non-com-message.png)
@@ -335,7 +368,7 @@ In this task, let's configure and collect data from your Linux machine by enabli
     
 1. Select **Servers** from the options on the Azure Arc blade.
 
-    ![](.././media/select-servers.png)
+    ![](.././media/azure-arc-server.png)
     
 1. Explore the **ubuntu-k8s** server from connected machines. 
 
@@ -349,7 +382,7 @@ In this task, let's configure and collect data from your Linux machine by enabli
 
     ![](.././media/enable-insights.png)
 
-1. On the Azure Monitor **Insights Onboarding** page, choose the existing **Log Analytics Workspace** named like ```LogAnalyticsWS-{Suffix}``` and then click on **Enable**.
+1. On the Azure Monitor **Insights Onboarding** page, choose the existing **Log Analytics Workspace** named like **LogAnalyticWS-<inject key="DeploymentID/Suffix" enableCopy="false" />** and then click on **Enable**.
 
     ![](.././media/enable-insights2.png)
 
