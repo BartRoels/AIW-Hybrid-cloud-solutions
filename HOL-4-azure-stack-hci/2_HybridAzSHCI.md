@@ -56,9 +56,9 @@ In this step, you will review the status of the Azure Arc services on the Azure 
     
     ![Azure Arc WAC](./media/Arc-4a.png "Azure Arc WAC")
 
-6. The Azure Portal will open in an extra browser Tab, showing you the **AzurestackHCI-ArcServers** resource group content. On the **Resources** page in the Azure Portal, you see the two Azure Arc-enabled Server representations of the Azure Stack HCI cluster nodes.
+6. The Azure Portal will open in an extra browser Tab, showing you the **AzurestackHCI** resource group content. On the **Resources** page in the Azure Portal, you see the two Azure Arc-enabled Server representations of the Azure Stack HCI cluster nodes.
     
-    ![Azure Arc WAC](./media/Arc-4b.png "Azure Arc WAC")
+    ![Azure Arc WAC](../media/hyd34.png "Azure Arc WAC")
 
 7. Move back to the Windows Admin Center browser Tab and click on **Azure Stack HCI registration**
     
@@ -72,33 +72,33 @@ In this step, you will review the status of the Azure Arc services on the Azure 
 
     > **NOTE**: You potentially will be asked to provide the Azure credentials. You can find them in the Environment Details of this Lab. If you get an "Action Required" screen, click "Ask later".
 
-    ![Azure Arc WAC](./media/Arc-5.png "Azure Arc WAC")
+    ![Azure Arc WAC](../media/hyd35.png "Azure Arc WAC")
 
 10.  The Azure Portal will open the HCIBox-Cluster - Azure Stack HCI blade. Click **Capabilities**.
 
-        ![Azure Arc WAC](./media/Arc-6.png "Azure Arc WAC")
+        ![Azure Arc WAC](../media/hyd36.png "Azure Arc WAC")
 
-15. On the **Capabilities** tab, click **Windows Admin Center**
+15. On the **Capabilities** tab, click on **Windows Admin Center**.
 
-    ![Azure Arc WAC](./media/Arc-11.png "Azure Arc WAC")    
+    ![Azure Arc WAC](../media/hyd37.png "Azure Arc WAC")    
 
-16. On the **Windows Admin Center (preview)** page, click **Set up**.
+16. On the **Windows Admin Center (preview)** page, click on **Set up**.
   
-    ![Azure Arc WAC](./media/Arc-12.png "Azure Arc WAC")
+    ![Azure Arc WAC](../media/hyd38.png "Azure Arc WAC")
 
-17. On the **Windows Admin Center** page, click **Set up**.
+17. On the **Windows Admin Center** page, click on **Install**.
   
     ![Azure Arc WAC](./media/Arc-13.png "Azure Arc WAC")
 
 18. On the **Capabilities** tab, the Windows Admin Center box should indicate **Configured**.
 
-    > **``NOTE``** This can take a couple of minutes, please be patient.
+    > **NOTE**: This can take a couple of minutes, please be patient.
   
       ![Azure Arc WAC](./media/Arc-14.png "Azure Arc WAC")    
 
     You just finalized the Activation of a couple of Hybrid features of Azure Stack HCI.
 
-    > **``NOTE``** We skipped configuring Insights as the Cluster nodes need to be updated to the May 2023 updates.
+    > **NOTE**: We skipped configuring Insights as the Cluster nodes need to be updated to the May 2023 updates.
 
     Once the Windows Admin Center box shows **Configured** proceed to the next Task.
 
@@ -120,7 +120,7 @@ In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to
  
 3. On the **Subscriptions** page, click on the Subscription name.
 
-    > **``NOTE``** It could be that your subscription name is different than the one in the screenshot!
+    > **NOTE**: It could be that your subscription name is different than the one in the screenshot!
 
     ![Azure Arc WAC](./media/Arc-19.png "Azure Arc WAC")
 
@@ -136,7 +136,7 @@ In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to
 
     ![Azure Arc WAC](./media/Arc-22.png "Azure Arc WAC")
 
-7. On the **Access controle (IAM)** page, Click **+ Add** and **Add role assignment**.
+7. On the **Access control (IAM)** page, Click **+ Add** and **Add role assignment**.
 
     ![Azure Arc WAC](./media/Arc-23.png "Azure Arc WAC")
 
@@ -150,22 +150,22 @@ In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to
 
 10. On the **Add role assignment** page, under the **Review + assign** tab, Click **Review + assign** at the bottom of the page.
 
-    > **``NOTE``** We have just the **Windows Admin Center Administrator Login** Role to an AAD User on the Subscription scope.
+    > **NOTE**: We have just the **Windows Admin Center Administrator Login** Role to an AAD User on the Subscription scope.
 
     >Learn more: https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/manage-hci-clusters
 
     ![Azure Arc WAC](./media/Arc-26.png "Azure Arc WAC")
 
-11. In the **"Search resources, services, and docs"** search box at the top of the Azure Portal page, type **hcibox-cluster** and under **Resources**, click **HCIBox-Cluster**.
+11. In the **"Search resources, services, and docs"** search box at the top of the Azure Portal page, type **HCIBox-Cluster** and under **Resources**, click **HCIBox-Cluster**.
 
-    ![Azure Arc WAC](./media/Arc-27.png "Azure Arc WAC")
+    ![Azure Arc WAC](../media/hyd39.png "Azure Arc WAC")
 
-12. On the **HCIBox-Cluster** page, under Settings, click **Windows Admin Center** and then Click **Connect**.
+12. On the **HCIBox-Cluster** page, under Settings, click **Windows Admin Center** and then Click on **Connect**.
 
     ![Azure Arc WAC](./media/Arc-28.png "Azure Arc WAC")
 
 13. On the **Windows Admin Center** page, complete the Username and Password field and Click Sign In.
-    > **``NOTE``** In case you need to provide login credentials, make sure the use the fully-qualified-DNS-domain\username format, and not the user principal name (UPN) format, like (user@fully_qualified_DNS_domain_name).
+    > **NOTE**: In case you need to provide login credentials, make sure the use the fully-qualified-DNS-domain\username format, and not the user principal name (UPN) format, like (user@fully_qualified_DNS_domain_name).
 
     ![Azure Arc WAC](./media/Arc-29.png "Azure Arc WAC")
 
@@ -179,7 +179,7 @@ In this step, you will further explore extra Azure Stack HCI Hybrid features and
 
 At this time you should still be having the following page active in the Azure Portal. If so Click **Extensions**.
 
-   ![Azure Arc WAC](./media/Arc-15.png "Azure Arc WAC")  
+   ![Azure Arc WAC](../media/hyd40.png "Azure Arc WAC")  
 
 ### Explore Extensions ###
 
@@ -189,9 +189,9 @@ At this time you should still be having the following page active in the Azure P
 
 ### Configuration of The Azure Stack HCI 22H2 cluster in the Azure Portal ###
 
-1. In the **"Search resources, services, and docs"** search box at the top of the Azure Portal page, type **hcibox-cluster** and under **Resources**, click **HCIBox-Cluster**.
+1. In the **"Search resources, services, and docs"** search box at the top of the Azure Portal page, type **HCIBox-Cluster** and under **Resources**, click **HCIBox-Cluster**.
 
-   ![Azure Arc WAC](./media/Arc-27.png "Azure Arc WAC")
+   ![Azure Arc WAC](../media/hyd39.png "Azure Arc WAC")
       
 2. On the **HCIBox-Cluster** page, under Settings, click **Configuration**.
 

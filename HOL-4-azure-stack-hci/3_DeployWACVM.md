@@ -45,19 +45,18 @@ In this step, you'll review a volume on the Azure Stack HCI 22H2 cluster by usin
     
 4. Open the volume **S2D_vDISK1**, by clicking on the name of the volume. We see a couple of things now:
    
-   > **``NOTE``** Invest enough time to read through the provided documentation as it covers some important information
+   > **NOTE**: Invest enough time to read through the provided documentation as it covers some important information
 
    - The Volume File system is a **Cluster Shared Volume** of type **ReFS**
      - *Please read more:* 
        - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/plan-volume
-       - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/storage-spaces-direct-overview)
+       - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/storage-spaces-direct-overview
    - The **Resiliency** was set to **Two-way mirror**
      - *Please read more:*
-       - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/fault-tolerance)
+       - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/fault-tolerance
    - **Encryption** is **Off**
      - *Please read more:*
        - https://learn.microsoft.com/en-us/azure-stack/hci/manage/volume-encryption-deduplication
-       - 
    - Also have a look at the Capacity and Performance indicators
   
       ![Review the existing volumes for VMs](./media/ReviewVolumes-4.png "WAC Review HCI cluster Volumes")
@@ -76,7 +75,7 @@ Task 2: Download .Iso files
 -----------
 In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .Iso file and upload the .Iso to your Clustered Shared Volume you explored in Task 1. 
 
-> **``TIP:``**  Make sure to use the Edge browser on the **AdminCenter** VM to execute the following steps. Right-click on the **here**, click **copy link**, and paste in the Edge browser on **AdminCenter** VM.
+> **TIP**:  Make sure to use the Edge browser on the **AdminCenter** VM to execute the following steps. Right-click on the **here**, click **copy link**, and paste in the Edge browser on **AdminCenter** VM.
 
 ## Download the .ISO files ##
 ### Download a Windows Server 2022 .Iso ###
@@ -87,7 +86,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 ### Download an Ubuntu Server 22.04 .Iso ### 
  
-1. Please download Ubuntu Server 22.04 image file from [here](https://releases.ubuntu.com/jammy/ubuntu-22.04.2-live-server-amd64.iso)
+1. Please download Ubuntu Server 22.04 image file from [here](https://ubuntu.com/download/desktop)
  
 2. The download of the ISO file should automatically start. Once completed you should find it in your Downloads folder.
 
@@ -102,11 +101,11 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
  
     ![Upload .Iso files](./media/Upload-1.png "Upload .Iso files")
 
-3. Select node AzSHOST1 and then click **Manage**
+3. Select node AzSHOST1 and then click on **Manage**.
  
     ![Upload .Iso files](./media/Upload-2.png "Upload .Iso files")
  
-4. On the left, select **Files & file sharing**. Open the folder **C:\ClusterStorage\S2D_vDISK1**
+4. On the left, select **Files & file sharing**. Open the folder **C:\ClusterStorage\S2D_vDISK1**.
   
     ![Upload .Iso files](./media/Upload-3.png "Upload .Iso files")
  
@@ -114,7 +113,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
  
     ![Upload .Iso files](./media/Upload-4.png "Upload .Iso files")
   
-> **``NOTE``** It can take up to around 5-10 minutes to get both .ISO files successfully uploaded. Maybe a good time to grab a coffee ;-). Once both .ISO files are successfully uploaded you can move on to the next Task.
+> **NOTE**: It can take up to around 5-10 minutes to get both .ISO files successfully uploaded. Maybe a good time to grab a coffee ;-). Once both .ISO files are successfully uploaded you can move on to the next Task.
 
 Task 3: Deploy a Windows Server 2022 virtual machine
 ----- 
@@ -126,7 +125,7 @@ In this step, you will deploy a Windows Server 2022 virtual machine via the Wind
     
     ![Create VM](./media/vm001-1.png "Create VM on Azure Stack HCI 22H2")
 
-3. On the **Virtual machines** page, select the **Inventory** tab, and then click on **Add** and select **New**.
+3. On the **Virtual machines** page, select the **Inventory** tab, and then click on **Add** and select **+ New**.
 
     ![Create VM](./media/vm001-2.png "Create VM on Azure Stack HCI 22H2")
 
@@ -371,8 +370,6 @@ For **AKS on Azure Stack HCI**, [Head on over to our AKS on Azure Stack HCI GitH
 Raising issues
 -----------
 This lab is based on the Azure Arc Jumpstart HCIBox: https://azurearcjumpstart.io/azure_jumpstart_hcibox/
-
-<img src="https://azurearcjumpstart.io/img/hcibox_logo.png" width="20%" height="20%">
 
 If you want to set up the lab within your own Azure subscription please follow this link: https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
 
