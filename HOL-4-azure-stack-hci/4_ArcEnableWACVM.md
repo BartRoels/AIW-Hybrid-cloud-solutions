@@ -122,7 +122,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
  
     ![](./media/vm002arc-10.png "")
 
-4. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **ENTER**. Type the Password ***ArcPassword123!!*** and **Enter**. You now SSHed into the VM002 Virtual Machine.
+4. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **Enter*. Type the Password ***ArcPassword123!!*** and **Enter**. You now SSHed into the VM002 Virtual Machine.
 
     > **NOTE**: Make sure to change the IP address according to your environment!
  
@@ -146,7 +146,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
     ![](./media/vm002arc-16.png "")
     ![](./media/vm002arc-17.png "")
 
-9.  Go back to the **Command Prompt** window, where you should see something similar to the below screenshot. Type **exit** and ENTER to disconnect the SSH connection. Type **Exit** again to close the Command Prompt.
+9.  Go back to the **Command Prompt** window, where you should see something similar to the below screenshot. Type **exit** and **Enter** to disconnect the SSH connection. Type **Exit** again to close the Command Prompt.
  
     ![](./media/vm002arc-18.png "")
 
@@ -158,7 +158,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
     ![](./media/vm002arc-19.png "")
 
-12. On the **vm002** page, click **Policies**.
+12. On the **vm002** page, click **Policies** under Operations.
     
     Do you remember that you assigned an Azure Policy to the Resource Group **ArcServers-rg** at the beginning of this exercise? 
     Now you can check if this Azure policy was successfully assigned to VM002 we added to that Resource Group.
@@ -178,7 +178,7 @@ In this step, you will prepare the Azure Connected Machine agent on the VM002 to
 
 ## Prepare  the Azure Connected Machine agent configuration on the VM002 ##
 
-1. On **AdminCenter** VM,  type **CMD** in the searchbox (right from Start) and then **ENTER**. Right-click the Command Prompt, and click **Run as Administrator**.
+1. On **AdminCenter** VM,  type **Cmd** in the searchbox (right from Start) and then **Enter**. Right-click the Command Prompt, and click **Run as administrator**.
  
     ![](./media/vm002arc-8.png "")
 
@@ -186,19 +186,19 @@ In this step, you will prepare the Azure Connected Machine agent on the VM002 to
  
     ![](./media/vm002arc-9.png "")
 
-3. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **ENTER**. Type the Password ***ArcPassword123!!*** and **ENTER**. You now SSHed into the VM002 Virtual Machine.
+3. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **Enter**. Type the Password **ArcPassword123!!** and **Enter**. You now SSHed into the VM002 Virtual Machine.
  
     ![](./media/vm002arc-11.png "")
 
-4. In the **Command Prompt** window, type **sudo -i** and **ENTER**. Type the Password ***ArcPassword123!!*** and **ENTER**.
+4. In the **Command Prompt** window, type **sudo -i** and **Enter**. Type the Password **ArcPassword123!!** and **Enter**.
  
     ![](./media/ssh-1.png "")
 
-5. In the **Command Prompt** window, type **azcmagent config list** and **ENTER**. You will notice the configuration of the incomingconnections.ports value is empty
+5. In the **Command Prompt** window, type **azcmagent config list** and **Enter**. You will notice the configuration of the incomingconnections.ports value is empty
 
     ![](./media/ssh-2.png "")
 
-6. In the **Command Prompt** window, type **azcmagent config set incomingconnections.ports 22** and **ENTER**. Now type **azcmagent config list** and **ENTER**. You will notice that the configuration of the incomingconnections.ports value is now set to **22**. Type **Exit** + **Enter** 3 times to close the Command Prompt.
+6. In the **Command Prompt** window, type **azcmagent config set incomingconnections.ports 22** and **Enter**. Now type **azcmagent config list** and **Enter**. You will notice that the configuration of the incomingconnections.ports value is now set to **22**. Type **Exit** + **Enter** 3 times to close the Command Prompt.
 
     ![](./media/ssh-3.png "")
 

@@ -323,7 +323,7 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
 
     ![Create VM](./media/vm002-21.png "Create VM on Azure Stack HCI 22H2")
 
-13. Now wait until you get the "Install complete!" screen and select **Reboot Now** and ENTER.
+13. Now wait until you get the "Install complete!" screen and select **Reboot Now** and Enter.
 
 15. Once the virtual machine is up and running try to log in!
 
