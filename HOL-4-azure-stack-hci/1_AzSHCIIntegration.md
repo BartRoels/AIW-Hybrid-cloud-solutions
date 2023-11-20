@@ -109,7 +109,7 @@ To use Azure services with Windows Admin Center, you must register your Windows 
 
    ![Installed extensions in Windows Admin Center](./media/code.png "Installed extensions in Windows Admin Center")
      
-6. When prompted for credentials, **enter your Azure credentials** for a tenant you'd like to use to register the Windows Admin Center and click on the **Continue** button if you get any popup saying **Are you trying to sign in to Windows Admin Center?**.
+6. When prompted for credentials, **enter your Azure credentials** for a tenant you'd like to use to register the Windows Admin Center and click on the **Continue** button if you get any popup saying **Are you trying to sign in to Windows Admin Center?**
 
 7. Now, navigate back to the **Windows Admin Center** tab, and you'll notice your tenant information has been added.  You can click on **Connect** to connect Windows Admin Center to Azure.
 
@@ -123,7 +123,7 @@ To use Azure services with Windows Admin Center, you must register your Windows 
 
 > **NOTE**: If you receive an error when signing in, still in **Settings**, under **User**, click on **Account** and click **Sign-in**. You should then be prompted for Azure credentials and permissions, to which you can then click **Accept**. Sometimes it just takes a few moments from the Windows Admin Center to create the Azure AD application and be able to sign in. Retry the sign-in until you've successfully signed in.
 > 
-> **NOTE**: Sometimes even after the cluster is registered it may show an error with SignIn with the following error, you can ignore that and close the popup: AADSTS700016: Application with identifier '******************' was not found in the directory 'Azure HOL ****'. This can happen if the application has not been installed by the administrator of the tenant or is consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
+> **NOTE**: Sometimes even after the cluster is registered it may show an error with Sign-in with the following error, you can ignore that and close the popup: AADSTS700016: Application with identifier was not found in the directory 'Azure HOL ****'. This can happen if the application has not been installed by the administrator of the tenant or is consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
 
 *******************************************************************************************************
 
@@ -131,13 +131,15 @@ To use Azure services with Windows Admin Center, you must register your Windows 
 
 Additional permissions were applied on the Windows Admin Center Azure AD application that was created when you connected Windows Admin Center to Azure, earlier. In this step, we'll quickly validate those permissions.
 
-1. Still in Windows Admin Center, click on the **Settings** gear in the top-right corner
+1. Still in Windows Admin Center, click on the **Settings** gear in the top-right corner.
+
 1. Under **Gateway**, click **Register**. You should see your previously registered Azure AD app:
 
     ![Your Azure AD app in Windows Admin Center](./media/WAC-Registered.png "Your Azure AD app in Windows Admin Center")
 
 1. Click on **View in Azure** to be taken to the Azure AD app portal, where you should see information about this app, including the permissions required. If you're prompted to log in, provide appropriate credentials.
-1. Once logged in, under **Configured permissions**, you should see a few permissions listed with the status **Granted for...** and the name of your tenant. The **Microsoft Graph (5)** API permissions will show as **not granted** but this will be updated upon deployment
+
+1. Once logged in, under **Configured permissions**, you should see a few permissions listed with the status **Granted for...** and the name of your tenant. The **Microsoft Graph (5)** API permissions will show as **not granted** but this will be updated upon deployment.
 
 5. Under **Configured permissions**, click on **Grant Admin Consent for Azure HOL** button.
 
