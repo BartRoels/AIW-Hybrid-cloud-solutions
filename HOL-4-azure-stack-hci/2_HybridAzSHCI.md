@@ -2,7 +2,7 @@
 ==============
 Overview
 -----------
-Discover, monitor, and manage the Azure Stack HCI hosts as well as the virtual machines. Extend your business to the cloud with an Azure hybrid solution. In this exercise you can now begin to explore the Hybrid by design capabilities of Azure Stack HCI 22H2 and Azure. We'll cover a few recommended activities below, to expose you to some of the key elements of Azure Stack HCI Hybrid by design capabilities.
+Discover, monitor, and manage the Azure Stack HCI hosts as well as the virtual machines. Extend your business to the cloud with an Azure hybrid solution. In this exercise, you can now begin to explore the Hybrid by-design capabilities of Azure Stack HCI 22H2 and Azure. We'll cover a few recommended activities below, to expose you to some of the key elements of Azure Stack HCI Hybrid by design capabilities.
 
 Contents
 -----------
@@ -23,7 +23,7 @@ Contents
 
 Task 1: Enable some Hybrid capabilities in Azure of your Azure Stack HCI cluster
 -----------
-In this step, you will review the status of the Azure Arc services on the Azure Stack HCI 22H2 cluster by using Windows Admin Center, enable Hybrid Azure Stack HCI Cluster features in the Azure Portal.
+In this step, you will review the status of the Azure Arc services on the Azure Stack HCI 22H2 cluster by using Windows Admin Center, and enable Hybrid Azure Stack HCI Cluster features in the Azure Portal.
 
 ### Review the status of the Azure Arc required services in Windows Admin Center ###
 
@@ -32,7 +32,7 @@ In this step, you will review the status of the Azure Arc services on the Azure 
     ![Azure Arc WAC](./media/ReviewVolumes-1.png "Azure Arc WAC")
     
         
-2. On the left hand navigation, under **Configuration** select **Azure Arc**.  The central **Azure Arc** page, click **1. Azure Stack HCI registration**.
+2. On the left-hand navigation, under **Configuration** select **Azure Arc**. For the central **Azure Arc** page, click **1. Azure Stack HCI registration**.
 
     ![Azure Arc WAC](./media/Arc-1.png "Azure Arc WAC")
     
@@ -56,7 +56,7 @@ In this step, you will review the status of the Azure Arc services on the Azure 
     
     ![Azure Arc WAC](./media/Arc-4a.png "Azure Arc WAC")
 
-6. The Azure Portal will open in an extra browser Tab, showing you the **AzurestackHCI-ArcServers** resource group content. On the **Resources** page in the Azure Portal, you see the two Azure Arc enabled Server representations of the Azure Stack HCI cluster nodes.
+6. The Azure Portal will open in an extra browser Tab, showing you the **AzurestackHCI-ArcServers** resource group content. On the **Resources** page in the Azure Portal, you see the two Azure Arc-enabled Server representations of the Azure Stack HCI cluster nodes.
     
     ![Azure Arc WAC](./media/Arc-4b.png "Azure Arc WAC")
 
@@ -123,7 +123,7 @@ Once the Windows Admin Center box shows **Configured** proceed to the next Task.
 
 Task 2: Manage Azure Stack HCI clusters using Windows Admin Center in Azure
 -----------
-In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to be connect to it using Windows Admin Center from the Azure Portal.
+In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to be connected to it using Windows Admin Center from the Azure Portal.
 
 ### Enable all requirements so you can use Windows Admin Center in the Azure portal to manage a hybrid machine ###
 
@@ -139,7 +139,7 @@ In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to
  
 3. On the **Subscriptions** page, click on the Subscription name.
 
-    > **``NOTE``** It could be that your subscription name is different then the one in the screenshot!
+    > **``NOTE``** It could be that your subscription name is different than the one in the screenshot!
 
     ![Azure Arc WAC](./media/Arc-19.png "Azure Arc WAC")
 
@@ -147,7 +147,7 @@ In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to
 
     ![Azure Arc WAC](./media/Arc-20.png "Azure Arc WAC")    
 
-5. On the **Resource providers** page, type **hybrid** in the filter by name box. Make sure the status of the Provider **Microsoft.HybridConnectivity** is **Registered**. If not Register if now.
+5. On the **Resource providers** page, type **hybrid** in the filter by name box. Make sure the status of the Provider **Microsoft.HybridConnectivity** is **Registered**. If not Register now.
 
     ![Azure Arc WAC](./media/Arc-21.png "Azure Arc WAC")
 
@@ -218,7 +218,7 @@ At this time you should still be having the following page active in the Azure P
 
 3. On the **Configuration** page, click **Configuration**. Here you find 5 different Configuration topics. The first part you find is the Summary of your **Billing** for your Azure Stack HCI System.
   
-    Here you also find the number of Physical Cores. Remember that you will only see the in the HW BIOS enabled Physical cores here. So you can optimize your cost by disabling unused physical core in your hardware BIOS.
+    Here you also find the number of Physical Cores. Remember that you will only see the in the HW BIOS enabled Physical cores here. So you can optimize your cost by disabling unused physical cores in your hardware BIOS.
   
      **Learn more on:** https://learn.microsoft.com/en-us/azure-stack/hci/concepts/billing
 
@@ -234,13 +234,13 @@ At this time you should still be having the following page active in the Azure P
 
 2. The 3rd part on the **configuration** page is where you are able to purchase a **Windows Server subscription add-on**.
    
-   Here you can buy subscription based Windows Server licenses to cover your guest Virtual machines running Windows Server. You will be charged for the total number of physical cores in your cluster
+   Here you can buy subscription-based Windows Server licenses to cover your guest Virtual machines running Windows Server. You will be charged for the total number of physical cores in your cluster
  
      **Learn more on:** https://learn.microsoft.com/en-us/azure-stack/hci/manage/vm-activate#windows-server-subscription
 
      ![HCI Configuration](./media/Configuration-4.png "HCI Configuration")
 
-3. The 4th part on the  **configuration** page is where you can change the **Service Health Data** level which is send to, and collected by Microsoft. 
+3. The 4th part on the  **configuration** page is where you can change the **Service Health Data** level which is sent to, and collected by Microsoft. 
  
     Microsoft by default collects a basic set of system metadata necessary to keep the Azure Stack HCI service current, secure, and operating properly.
    
@@ -270,9 +270,9 @@ At this time you should still be having the following page active in the Azure P
     > **Learn More on** https://learn.microsoft.com/en-us/azure-stack/hci/manage/azure-benefits
 
 <!--
-### Monitor Insights on your Azure Stack HCI clusters using in Azure  ### 
+### Monitor Insights on your Azure Stack HCI clusters using Azure  ### 
 
-In Task 1 of Exercise 2 you enabled the Monitoring Insights capabilities on the Azure Stack HCI cluster resource via the Azure Portal. Normally it takes around 15minutes to see the first data showing up i
+In Task 1 of Exercise 2 you enabled the Monitoring Insights capabilities on the Azure Stack HCI cluster resource via the Azure Portal. Normally it takes around 15 minutes to see the first data showing up i
 
 1. In the "Search resources, services, and docs" search box at the top of the Azure Portal page, type **hciboxcluster** and under Resources, click **hciboxcluster**.
 
@@ -331,6 +331,6 @@ This lab is based on the Azure Arc Jumpstart HCIBox: https://azurearcjumpstart.i
 
 <img src="https://azurearcjumpstart.io/img/hcibox_logo.png" width="20%" height="20%">
 
-If you want to setup the lab within your own Azure subscription please follow this link : https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
+If you want to set up the lab within your own Azure subscription please follow this link: https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
 
 If you notice something is wrong with this guide, such as a step isn't working, or something just doesn't make sense - help us to make this guide better!
