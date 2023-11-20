@@ -29,7 +29,7 @@ In this step, you will add an extra virtual machine image to the Azure Stack HCI
 
     ![](../media/hyd43.png "")
     
-3. On the **HCIBox-Cluster | VM images** page, Click **+ Add VM image** and then Click **From Azure Marketplace**.
+3. On the **HCIBox-Cluster | VM images** page, click **+ Add VM image** and then Click **From Azure Marketplace**.
 
     ![](./media/img-3.png "")
 
@@ -37,7 +37,7 @@ In this step, you will add an extra virtual machine image to the Azure Stack HCI
 
     ![](./media/img-4.png "")
 
-5. On the **Create an image** page, Click **Create**.
+5. On the **Create an image** page, click **Create**.
 
     ![](./media/img-5.png "")
 
@@ -61,7 +61,7 @@ In this step, you will deploy an extra Virtual Machine on the Azure Stack HCI cl
 
     ![](../media/hyd44.png "")
     
-3. On the **HCIBox-Cluster | Virtual machines** page, Click **+ Create VM**.
+3. On the **HCIBox-Cluster | Virtual machines** page, click **+ Create VM**.
 
     ![](../media/hyd45.png "")
 
@@ -74,7 +74,7 @@ In this step, you will deploy an extra Virtual Machine on the Azure Stack HCI cl
     - Username: **arcdemo**
     - Password: **ArcPassword123!!**
     - Conform password: **ArcPassword123!!**
-    - Enable guest management: *Yes*
+    - Enable guest management: **Yes**
 
         ![](./media/rb-3.png "")
         ![](./media/rb-4.png "")

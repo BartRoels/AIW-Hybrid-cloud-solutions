@@ -66,7 +66,7 @@ In this step, you will create a new Azure Resource Group and assign an extra Azu
 
     ![Create Azure Resource Group](./media/policy-6.png "Create Azure Resource Group")
 
-7. After a couple of minutes you should see an extra Policy assignment popping up in the list of Assigned Policies.
+7. After a couple of minutes, you should see an extra Policy assignment popping up in the list of Assigned Policies.
 
     ![Create Azure Resource Group](./media/policy-7.png "Create Azure Resource Group")
 
@@ -81,11 +81,11 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
     ![Create Azure Resource Group](../media/hyd41.png "Create Azure Resource Group")
     
-2. On the **Azure Arc | Machines** page, Click on **+ Add a machine**.
+2. On the **Azure Arc | Machines** page, click on **+ Add a machine**.
 
     ![Create Azure Resource Group](../media/hyd42.png "Create Azure Resource Group")
 
-3. On the **Add servers with Azure Arc** page, in the **Add a single server** box, Click on **Generate script**
+3. On the **Add servers with Azure Arc** page, in the **Add a single server** box, Click on **Generate script**.
 
     ![Create Azure Resource Group](./media/vm002arc-3.png "Create Azure Resource Group")
 
@@ -98,7 +98,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
     ![Create Azure Resource Group](./media/vm002arc-5.png "Create Azure Resource Group")
 
 6. On the **Add servers with Azure Arc** page, on the *Tags* tab, Click **Next**.
-   > **NOTE**: If you want, you can, of course, add a Cutsom tag, but the best practice is that you do this via Azure Policies.
+   > **NOTE**: If you want, you can, of course, add a Custom tag, but the best practice is that you do this via Azure Policies.
 
     ![Create Azure Resource Group](./media/vm002arc-6.png "Create Azure Resource Group")
 
@@ -108,21 +108,21 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 ### Azure Arc-enable virtual machine VM002 ###
  
-1. On **AdminCenter** VM,  type **Cmd** in the searchbox (right from Start) and then **Enter**. Right-click the Command Prompt, and click **Run as administrator**.
+1. On **AdminCenter** VM,  type **Cmd** in the search box (right from Start) and then **Enter**. Right-click the Command Prompt, and click **Run as administrator**.
  
     ![](./media/vm002arc-8.png "")
 
-2. When receiving a **User Account Control** popup screen Click **Yes**
+2. When receiving a **User Account Control** popup screen Click **Yes**.
  
     ![](./media/vm002arc-9.png "")
 
 3. In the **Command Prompt** window, type **scp "C:\Users\arcdemo\Downloads\OnboardingScript.sh" arcdemo@192.168.200.211:OnboardingScript.sh** and **Enter**. Type the Password ***ArcPassword123!!*** and **Enter**. By doing this we will copy the Azure Arc-enabled Server Onboarding Script **OnboardingScript.sh** to VM002.
 
-    > **``NOTE``** Make sure to change the IP address according to your environment!
+    > **NOTE**: Make sure to change the IP address according to your environment!
  
     ![](./media/vm002arc-10.png "")
 
-4. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **Enter*. Type the Password ***ArcPassword123!!*** and **Enter**. You now SSHed into the VM002 Virtual Machine.
+4. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **Enter*. Type the Password ***ArcPassword123!!*** and **Enter**. You now SSH into the VM002 Virtual Machine.
 
     > **NOTE**: Make sure to change the IP address according to your environment!
  
@@ -154,7 +154,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
     ![](../media/hyd41.png "")
 
-11. On the **Azure Arc | Machines** page, Click on **vm002**, which you just added as an Azure Arc-enabled virtual machine to Azure.
+11. On the **Azure Arc | Machines** page, click on **vm002**, which you just added as an Azure Arc-enabled virtual machine to Azure.
 
     ![](./media/vm002arc-19.png "")
 
@@ -174,11 +174,11 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 Task 3: Leverage the Azure AD RBAC controls to securely connect to VM002 via the Azure Arc-enabled Server capabilities
 ----- 
-In this step, you will prepare the Azure Connected Machine agent on the VM002 to securely connect to VM002
+In this step, you will prepare the Azure Connected Machine agent on the VM002 to securely connect to VM002.
 
 ## Prepare  the Azure Connected Machine agent configuration on the VM002 ##
 
-1. On **AdminCenter** VM,  type **Cmd** in the searchbox (right from Start) and then **Enter**. Right-click the Command Prompt, and click **Run as administrator**.
+1. On **AdminCenter** VM, type **Cmd** in the search box (right from Start) and then **Enter**. Right-click the Command Prompt, and click **Run as administrator**.
  
     ![](./media/vm002arc-8.png "")
 
@@ -186,7 +186,7 @@ In this step, you will prepare the Azure Connected Machine agent on the VM002 to
  
     ![](./media/vm002arc-9.png "")
 
-3. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **Enter**. Type the Password **ArcPassword123!!** and **Enter**. You now SSHed into the VM002 Virtual Machine.
+3. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **Enter**. Type the Password **ArcPassword123!!** and **Enter**. You now SSH into the VM002 Virtual Machine.
  
     ![](./media/vm002arc-11.png "")
 
@@ -206,13 +206,13 @@ In this step, you will prepare the Azure Connected Machine agent on the VM002 to
 
     ![](./media/ssh-4.png "")
 
-8. On the **vm002** pagem click **Connect** under **settings**. On the **vm002 | Connect** page, click Password. Add **arcdemo** in the Username field. Click **Connect in browser**. If this is the first time you opened an Azure Shell, you will be asked to create a storage account. Click on **Create storage**.
+8. On the **vm002** page click **Connect** under **settings**. On the **vm002 | Connect** page, click Password. Add **arcdemo** in the Username field. Click **Connect in browser**. If this is the first time you opened an Azure Shell, you will be asked to create a storage account. Click on **Create storage**.
 
     ![](./media/ssh-5.png "")
 
 9. If all went well you should have established an SSH connection from within the Azure Portal to your on-premises Azure Arc-enabled Virtual Machine, for example on an Azure Stack HCI.
 
-    > **``NOTE``** Learn more : https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-overview    
+    > **NOTE**: Learn more : https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-overview    
 
     ![](./media/ssh-6.png "")
 
