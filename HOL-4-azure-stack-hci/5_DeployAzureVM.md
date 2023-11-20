@@ -21,19 +21,19 @@ Task 1: Add an Azure Marketplace image to your Azure Stack HCI
 -----------
 In this step, you will add an extra virtual machine image to the Azure Stack HCI Cluster.
 
-1. In the **"Search resources, services, and docs"** search box at the top of the Azure Portal page, type **HCIBox-Cluster** and click **HCIBx-Cluster** under **Resources**.
+1. In the **"Search resources, services, and docs"** search box at the top of the Azure Portal page, type **HCIBox-Cluster** and click **HCIBox-Cluster** under **Resources**.
 
-    ![](./media/img-1.png "")
+    ![](../media/hyd39.png "")
         
-2. On the **HCIBox-Cluster page**, Click **VM images**.
+2. On the **HCIBox-Cluster page**, Click **VM images** under Resources.
 
-    ![](./media/img-2.png "")
+    ![](../media/hyd43.png "")
     
-3. On the **HCIBox-Cluster | VM images** page, Click **+ VM image** and then Click **From Azure Marketplace**.
+3. On the **HCIBox-Cluster | VM images** page, Click **+ Add VM image** and then Click **From Azure Marketplace**.
 
     ![](./media/img-3.png "")
 
-4. On the **Create an image** page, Select the Resource Group **AzureStackHCI** in the Resource Group Field. In the **image to Download** Field select **Windows 11 Enterprise multi-session + Microsoft 365 Apps, version 21H2 - Gen2**. Click **Review + create**. 
+4. On the **Create an image** page, Select the Resource Group **AzureStackHCI** in the Resource Group Field. In the **image to Download** Field select **Windows 11 Enterprise multi-session + Microsoft 365 Apps, version 21H2 - Gen2**. Click on **Review + create**. 
 
     ![](./media/img-4.png "")
 
@@ -43,7 +43,7 @@ In this step, you will add an extra virtual machine image to the Azure Stack HCI
 
 6. You will now be redirected to the **Deployment is in progress** page.
 
-    > **``NOTE``** This step will take 60+ minutes. 
+    > **NOTE**: This step will take 60+ minutes. 
 
     ![](./media/img-6.png "")
 
@@ -53,17 +53,17 @@ Task 2: Deploy an extra Virtual Machine on the Azure Stack HCI cluster from the 
 -----------
 In this step, you will deploy an extra Virtual Machine on the Azure Stack HCI cluster from the Azure Portal.
 
-1. In the **"Search resources, services, and docs"** search box at the top of the Azure Portal page, type **HCIBox-Cluster** and click **HCIBx-Cluster** under **Resources**.
+1. In the **"Search resources, services, and docs"** search box at the top of the Azure Portal page, type **HCIBox-Cluster** and click **HCIBox-Cluster** under **Resources**.
 
-    ![](./media/img-1.png "")
+    ![](../media/hyd39.png "")
         
 2. On the **HCIBox-Cluster page**, Click **Virtual machines**.
 
-    ![](./media/rb-1.png "")
+    ![](../media/hyd44.png "")
     
 3. On the **HCIBox-Cluster | Virtual machines** page, Click **+ Create VM**.
 
-    ![](./media/rb-2.png "")
+    ![](../media/hyd45.png "")
 
 4. On the **Create an Azure Arc virtual machine** page, fill in the below values and then Click **Next : Disk >**.
 
@@ -76,10 +76,10 @@ In this step, you will deploy an extra Virtual Machine on the Azure Stack HCI cl
     - Conform password: **ArcPassword123!!**
     - Enable guest management: *Yes*
 
-    ![](./media/rb-3.png "")
-    ![](./media/rb-4.png "")
+        ![](./media/rb-3.png "")
+        ![](./media/rb-4.png "")
 
-5. On the **Create an Azure Arc virtual machine** page, **Disk** tab, Click **Next : Networking >**.
+5. On the **Create an Azure Arc virtual machine** page, **Disks** tab, Click **Next : Networking >**.
 
     ![](./media/rb-5.png "")
 
@@ -113,7 +113,7 @@ After some time the Deployment will be finished and you will be able to Go to th
 
 You've successfully deployed an extra Virtual Machine on the Azure Stack HCI cluster from the Azure Portal.
 
-> **``NOTE``** Currently there is a known issue in the Jumpstart HCIBox (Public Preview) solution which impacts the enablement of the guest management.
+> **NOTE**: Currently there is a known issue in the Jumpstart HCIBox (Public Preview) solution which impacts the enablement of the guest management.
 
 Summary
 -----------
@@ -136,8 +136,6 @@ For **AKS on Azure Stack HCI**, [Head on over to our AKS on Azure Stack HCI GitH
 Raising issues
 -----------
 This lab is based on the Azure Arc Jumpstart HCIBox: https://azurearcjumpstart.io/azure_jumpstart_hcibox/
-
-<img src="https://azurearcjumpstart.io/img/hcibox_logo.png" width="20%" height="20%">
 
 If you want to set up the lab within your own Azure subscription please follow this link: https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
 

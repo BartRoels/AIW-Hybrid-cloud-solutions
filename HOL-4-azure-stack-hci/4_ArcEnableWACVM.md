@@ -79,36 +79,36 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 1. In the "Search resources, services, and docs" search box at the top of the Azure Portal page, type **Machines - Azure Arc** and click **Machines - Azure Arc** under Services.
 
-    ![Create Azure Resource Group](../media/hyd40.png "Create Azure Resource Group")
+    ![Create Azure Resource Group](../media/hyd41.png "Create Azure Resource Group")
     
-2. On the **Azure Arc | Servers** page, Click **+ Add**
+2. On the **Azure Arc | Machines** page, Click on **+ Add a machine**.
 
-    ![Create Azure Resource Group](../media/hyd40.png "Create Azure Resource Group")
+    ![Create Azure Resource Group](../media/hyd42.png "Create Azure Resource Group")
 
-3. On the **Add servers with Azure Arc** page, in the **Add a single server** box, Click **Generate script**
+3. On the **Add servers with Azure Arc** page, in the **Add a single server** box, Click on **Generate script**
 
     ![Create Azure Resource Group](./media/vm002arc-3.png "Create Azure Resource Group")
 
-4. On the **Add servers with Azure Arc** page, on the *Prerequisites* tab., Click **NEXT**.
+4. On the **Add a server with Azure Arc** page, on the *Prerequisites* tab., Click **Next**.
 
     ![Create Azure Resource Group](./media/vm002arc-4.png "Create Azure Resource Group")
 
-5. On the **Add servers with Azure Arc** page, on the *Resource details* tab, select the Resource Group **ArcServers-rg**, select **Linux** as Operating System and then Click **NEXT**
+5. On the **Add servers with Azure Arc** page, on the *Resource details* tab, select the Resource Group **ArcServers-rg**, select **Linux** as Operating System and then Click **Next**.
 
     ![Create Azure Resource Group](./media/vm002arc-5.png "Create Azure Resource Group")
 
-6. On the **Add servers with Azure Arc** page, on the *Tags* tab, Click **NEXT**
-   > **``NOTE``** If you want you can of course add a Cutsom tag, but best practice is that you do this via Azure Policies.
+6. On the **Add servers with Azure Arc** page, on the *Tags* tab, Click **Next**.
+   > **NOTE**: If you want, you can, of course, add a Cutsom tag, but the best practice is that you do this via Azure Policies.
 
     ![Create Azure Resource Group](./media/vm002arc-6.png "Create Azure Resource Group")
 
-7. On the **Add servers with Azure Arc** page, on the *Download and run script* tab, Click **Download** (You later can find it in your Downloads folder). Click **Close**.
+7. On the **Add a server with Azure Arc** page, on the *Download and run script* tab, Click **Download** (You later can find it in your Downloads folder). Click **Close**.
    
     ![Create Azure Resource Group](./media/vm002arc-7.png "Create Azure Resource Group")
 
 ### Azure Arc-enable virtual machine VM002 ###
  
-1. On **AdminCenter** VM,  type **CMD** in the searchbox (right from Start) and then **ENTER**. Right-click the Command Prompt, and click **Run as Administrator**.
+1. On **AdminCenter** VM,  type **Cmd** in the searchbox (right from Start) and then **Enter**. Right-click the Command Prompt, and click **Run as administrator**.
  
     ![](./media/vm002arc-8.png "")
 
@@ -116,19 +116,19 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
  
     ![](./media/vm002arc-9.png "")
 
-3. In the **Command Prompt** window, type **scp "C:\Users\arcdemo\Downloads\OnboardingScript.sh" arcdemo@192.168.200.211:OnboardingScript.sh** and **ENTER**. Type the Password ***ArcPassword123!!*** and **ENTER**. By doing this we will copy the Azure Arc-enabled Server Onboarding Script **OnboardingScript.sh** to VM002.
+3. In the **Command Prompt** window, type **scp "C:\Users\arcdemo\Downloads\OnboardingScript.sh" arcdemo@192.168.200.211:OnboardingScript.sh** and **Enter**. Type the Password ***ArcPassword123!!*** and **Enter**. By doing this we will copy the Azure Arc-enabled Server Onboarding Script **OnboardingScript.sh** to VM002.
 
     > **``NOTE``** Make sure to change the IP address according to your environment!
  
     ![](./media/vm002arc-10.png "")
 
-4. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **ENTER**. Type the Password ***ArcPassword123!!*** and **ENTER**. You now SSHed into the VM002 Virtual Machine.
+4. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **ENTER**. Type the Password ***ArcPassword123!!*** and **Enter**. You now SSHed into the VM002 Virtual Machine.
 
-    > **``NOTE``** Make sure to change the IP address according to your environment!
+    > **NOTE**: Make sure to change the IP address according to your environment!
  
     ![](./media/vm002arc-11.png "")
 
-5. In the **Command Prompt** window, type **ls** and **ENTER**. You now should see the uploaded Azure Arc-enabled Server Onboarding script **OnboardingScript.sh**. Next start the Onboarding Script by typing **bash ~/OnboardingScript.sh** and **ENTER**. If asked provide the Password **ArcPassword123!!** and **ENTER**
+5. In the **Command Prompt** window, type **ls** and **Enter**. You now should see the uploaded Azure Arc-enabled Server Onboarding script **OnboardingScript.sh**. Next start the Onboarding Script by typing **bash ~/OnboardingScript.sh** and **Enter**. If asked provide the Password **ArcPassword123!!** and **Enter**.
  
     ![](./media/vm002arc-12.png "")
 
@@ -136,7 +136,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
  
     ![](./media/vm002arc-13.png "")
 
-7. Open a new browser tab and go to **https://aka.ms/devicelogin**, paste the Code from your Clipboard (check if there is no extra space behind the code!). Click **NEXT**
+7. Open a new browser tab and go to **https://aka.ms/devicelogin**, paste the Code from your Clipboard (check if there is no extra space behind the code!). Click **Next**.
  
     ![](./media/vm002arc-14.png "")
 
@@ -150,11 +150,11 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
  
     ![](./media/vm002arc-18.png "")
 
-10. In the "Search resources, services, and docs" search box at the top of the Azure Portal page, type **Servers** and click **Servers - Azure Arc** under Services.
+10. In the "Search resources, services, and docs" search box at the top of the Azure Portal page, type **Machines** and click **Machines - Azure Arc** under Services.
 
-    ![](./media/vm002arc-1.png "")
+    ![](../media/hyd41.png "")
 
-11. On the **Azure Arc | Servers** page, Click on **vm002**, which you just added as an Azure Arc-enabled virtual machine to Azure.
+11. On the **Azure Arc | Machines** page, Click on **vm002**, which you just added as an Azure Arc-enabled virtual machine to Azure.
 
     ![](./media/vm002arc-19.png "")
 
@@ -167,7 +167,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 13. As you will notice the policy was successfully assigned. This is just an example of the power of using Azure Policies. Imagine what you all can automate just by leveraging Azure Policies, not only for Compliance, regulations, Privacy, ... checks
 
-    > **``NOTE``** This can take a while, so if the "Compliance state" column is stating "Not Started", grab a coffee and check again later (+- 5 minutes).
+    > **NOTE**: This can take a while, so if the "Compliance state" column is stating "Not Started", grab a coffee and check again later (+- 5 minutes).
         
     ![](./media/vm002arc-21.png "")
 
@@ -235,8 +235,6 @@ For **AKS on Azure Stack HCI**, [Head on over to our AKS on Azure Stack HCI GitH
 Raising issues
 -----------
 This lab is based on the Azure Arc Jumpstart HCIBox: https://azurearcjumpstart.io/azure_jumpstart_hcibox/
-
-<img src="https://azurearcjumpstart.io/img/hcibox_logo.png" width="20%" height="20%">
 
 If you want to set up the lab within your own Azure subscription please follow this link: https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
 

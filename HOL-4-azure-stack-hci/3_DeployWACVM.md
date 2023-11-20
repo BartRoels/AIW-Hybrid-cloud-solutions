@@ -236,7 +236,7 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
  
     ![Create VM](./media/vm002-4a.png "Create VM on Azure Stack HCI 22H2")
 
-7. Make sure to change the Secure Boot template to "Microsoft UEFI Certificate Authority" in the Template drop-down box, and click **save security settings**. DO NOT CLICK **Close**.
+7. Make sure to change the Secure Boot template to "Microsoft UEFI Certificate Authority" in the Template drop-down box, and click **Save security settings**. DO NOT CLICK **Close**.
 
     ![Create VM](./media/vm002-4b.png "Create VM on Azure Stack HCI 22H2")
 
@@ -246,7 +246,7 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
     ![Create VM](./media/vm002-4c.png "Create VM on Azure Stack HCI 22H2")
 -->
 
-9.  Click on **Power** and select **Start** - within moments, the VM should be running.
+9.  Click on **Power** and select **Start** within moments, the VM should be running.
 
     ![Create VM](./media/vm002-5.png "Create VM on Azure Stack HCI 22H2")
     
@@ -256,11 +256,11 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
     ![Create VM](./media/vm002-7.png "Create VM on Azure Stack HCI 22H2")
     
 
-8. Click on Connect and select the Connect button from the drop-down.
+8. Click on **Connect** and select the **Connect** button from the drop-down.
 
     ![Create VM](./media/vm002-8.png "Create VM on Azure Stack HCI 22H2")
  
-9.  Fill in the Username **arcdemo@jumpstart.local** and password **ArcPassword123!!**. Before clicking on **Connect** first make sure to click the checkbox before "Automatically connect with the certificate presented by this machine", when you receive the certificate prompt, click **Confirm**. Now click **Connect**.
+9.  Fill in the Username **arcdemo@jumpstart.local** and password **ArcPassword123!!**. Before clicking on **Connect** first make sure to click the checkbox before "Automatically connect with the certificate presented by this machine", when you receive the certificate prompt, click **Confirm**. Now click on **Connect**.
   
     ![Create VM](./media/vm002-9.png "Create VM on Azure Stack HCI 22H2")  
 
@@ -268,33 +268,33 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
 
     ![Create VM](./media/vm002-10.png "Create VM on Azure Stack HCI 22H2") 
 
-1. On the "Installer update available" page, select **Update to the new installer** and ENTER.
+1. On the "Installer update available" page, select **Update to the new installer** and Enter.
 
     ![Create VM](./media/vm002-9a.png "Create VM on Azure Stack HCI 22H2")
 
-1. On the "Keyboard configuration" page, select **Done** and ENTER.
+1. On the "Keyboard configuration" page, select **Done** and Enter.
 
     ![Create VM](./media/vm002-11.png "Create VM on Azure Stack HCI 22H2")
 
-1. On the "Choose type of install" page, select **Done** and ENTER.
+1. On the "Choose type of install" page, select **Done** and Enter.
 
     ![Create VM](./media/vm002-12.png "Create VM on Azure Stack HCI 22H2") 
 
-2. On the "Network connections" page, select **Done** and ENTER.
+2. On the "Network connections" page, select **Done** and Enter.
    
    **NOTE:** Make sure you see an IP on the DHCPv4 line!
 
     ![Create VM](./media/vm002-13.png "Create VM on Azure Stack HCI 22H2") 
 
-3. On the "Configure Proxy" page, select **Done** and ENTER.
+3. On the "Configure Proxy" page, select **Done** and Enter.
 
     ![Create VM](./media/vm002-14.png "Create VM on Azure Stack HCI 22H2")
 
-3. On the "Configure Ubuntu archive mirror" page, select **Done** and ENTER.
+3. On the "Configure Ubuntu archive mirror" page, select **Done** and Enter.
 
     ![Create VM](./media/vm002-15.png "Create VM on Azure Stack HCI 22H2") 
 
-7. On the "Guided storage configuration" page, select **Done** and ENTER.
+7. On the "Guided storage configuration" page, select **Done** and Enter.
 
     ![Create VM](./media/vm002-16.png "Create VM on Azure Stack HCI 22H2")
 
@@ -302,16 +302,16 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
 
     ![Create VM](./media/vm002-17.png "Create VM on Azure Stack HCI 22H2")
 
-9.  On the Profile setup screen complete the fields below and then select **Done** and ENTER
-     * Your name: arcdemo
-     * Your server's name: vm002
-     * Pick a username: arcdemo
-     * Choose a password: ArcPassword123!!
-     * Confirm your password: ArcPassword123!!
+9.  On the Profile setup screen complete the fields below and then select **Done** and Enter.
+     * Your name: **arcdemo**
+     * Your server's name: **vm002**
+     * Pick a username: **arcdemo**
+     * Choose a password: **ArcPassword123!!**
+     * Confirm your password: **ArcPassword123!!**
 
     ![Create VM](./media/vm002-18.png "Create VM on Azure Stack HCI 22H2")
 
-10. On the "Upgrade to Ubuntu Pro" screen, select **Continue** and ENTER.
+10. On the "Upgrade to Ubuntu Pro" screen, select **Continue** and Enter.
 
     ![Create VM](./media/vm002-19.png "Create VM on Azure Stack HCI 22H2")
 
