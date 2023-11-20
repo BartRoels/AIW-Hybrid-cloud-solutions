@@ -45,7 +45,6 @@ In this step, you will review the status of the Azure Arc services on the Azure 
     ##### Server status: #####
    - **Connected** under the Azure connection status for every Server.
        
-
         ![Azure Arc WAC](./media/Arc-2.png "Azure Arc WAC")
     
 4. Now click **Arc-enabled servers** on the current **Azure Arc | Azure Stack HCI registration** page
@@ -78,7 +77,7 @@ In this step, you will review the status of the Azure Arc services on the Azure 
 
         ![Azure Arc WAC](../media/hyd36.png "Azure Arc WAC")
 
-15. On the **Capabilities** tab, click on **Windows Admin Center**.
+15. On the **Capabilities** tab, click on **Windows Admin Center (Preview)**.
 
     ![Azure Arc WAC](../media/hyd37.png "Azure Arc WAC")    
 
@@ -124,7 +123,7 @@ In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to
 
     ![Azure Arc WAC](./media/Arc-19.png "Azure Arc WAC")
 
-4. On the selected **Subscription** page, click **Resource providers**
+4. On the selected **Subscription** page, click **Resource providers** under Settings.
 
     ![Azure Arc WAC](./media/Arc-20.png "Azure Arc WAC")    
 

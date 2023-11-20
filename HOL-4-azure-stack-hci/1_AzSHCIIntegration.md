@@ -42,12 +42,12 @@ This Lab also includes a dedicated Windows Admin Center (WAC) gateway server. Th
 
 The first time you access the Windows Admin Center you will get a Welcome screen **Successfully installed version 2211**. Just close it and now wait (+- 2 minutes) until all WAC extensions are installed and you get a popup window telling you "Successfully updated your extensions". Just click [OK]. Windows Admin Center will automatically refresh.
 
-1. Now that we are logged in, our first step is to add a connection to our HCI cluster. Click on the **Add** button, and then click on **Add** under **Server clusters**.
+1. Now that we are logged in, our first step is to add a connection to our HCI cluster. Click on the **+ Add** button, and then click on **Add** under **Server clusters**.
 
     ![-](./media/wac_empty.png "Screenshot showing WAC first login")
     ![-](./media/wac_add_cluster.png "Screenshot showing WAC adding cluster")
 
-5. Enter **hciboxcluster** for the cluster name, and use the domain account credential to connect to the cluster.
+5. Enter **hciboxcluster** for the Cluster name, and use the domain account credential to connect with account.
 
     ![-](./media/wac_add_cluster_detail.png "Screenshot showing WAC connection details")
     ![-](./media/wac_add_cluster_detail_2.png "Screenshot showing WAC connection details")
@@ -61,7 +61,7 @@ The first time you access the Windows Admin Center you will get a Welcome screen
 
     ![-](./media/wac_cluster_added_detail.png "Screenshot showing cluster detail")
 
-You just successfully added the existing Azure Stack HCI 22H2 Cluster **hciboxcluste** to your Windows Admin Center. We will explore the Cluster capabilities leveraging WAC in upcoming tasks.
+You just successfully added the existing Azure Stack HCI 22H2 Cluster **hciboxcluster** to your Windows Admin Center. We will explore the Cluster capabilities leveraging WAC in upcoming tasks.
 
 ## Task 2: Verify your Azure Stack HCI 22H2 Cluster is registered with Azure
 
@@ -85,7 +85,7 @@ We're going to perform the registration verification from the **AdminCenter** ma
     
     ![Check updated registration status with PowerShell](./media/Verify-registered-cluster.png "Check updated registration status with PowerShell")
 
-You can see the **RegistrationStatus**, the **ConnectionStatus** and **LastConnected** time, which is usually within the last day unless the cluster is temporarily disconnected from the Internet. An Azure Stack HCI 22H2 cluster can operate fully offline for up to 30 consecutive days.
+You can see the **RegistrationStatus**, the **ConnectionStatus** time, which is usually within the last day unless the cluster is temporarily disconnected from the Internet. An Azure Stack HCI 22H2 cluster can operate fully offline for up to 30 consecutive days.
 
 You can close the Windows PowerShell ISE. No need to save the PowerShell script.
 
@@ -95,13 +95,13 @@ To use Azure services with Windows Admin Center, you must register your Windows 
 
 1. In Windows Admin Center, select the Settings gear icon from the top right corner of the page.
 
-2. From the Settings menu in the left pane, go to Gateway > Register.
+2. From the Settings menu in the left pane, go to **Gateway** > **Register**.
 
 3. Select the Register button at the center of the page. The registration pane appears on the right of the page.
    
     ![Register Windows Admin Center](./media/register-wac.png "Register Windows Admin Center in Azure")
 
-4. Iin the **Get started with Azure in Windows Admin Center** blade, follow the instructions to **Copy the code**(2) and then click on the link **Enter the Code**(3) to configure device login.
+4. On the **Get started with Azure in Windows Admin Center** blade, follow the instructions to **Copy the code (2)** and then click on the link **Enter the Code (3)** to configure device login.
 
    ![Installed extensions in Windows Admin Center](./media/login.png "Installed extensions in Windows Admin Center")
     
@@ -121,10 +121,9 @@ To use Azure services with Windows Admin Center, you must register your Windows 
 
 *******************************************************************************************************
 
-> **``NOTE``**: If you receive an error when signing in, still in **Settings**, under **User**, click on **Account** and click **Sign-in**. You should then be prompted for Azure credentials and permissions, to which you can then click **Accept**. Sometimes it just takes a few moments from the Windows Admin Center to create the Azure AD application and be able to sign in. Retry the sign-in until you've successfully signed in.
+> **NOTE**: If you receive an error when signing in, still in **Settings**, under **User**, click on **Account** and click **Sign-in**. You should then be prompted for Azure credentials and permissions, to which you can then click **Accept**. Sometimes it just takes a few moments from the Windows Admin Center to create the Azure AD application and be able to sign in. Retry the sign-in until you've successfully signed in.
 > 
-> **``NOTE``**: Sometimes even after the cluster is registered it may show an error with SignIn with the following error, you can ignore that and close the popup:
-   ```AADSTS700016: Application with identifier '******************' was not found in the directory 'Azure HOL ****'. This can happen if the application has not been installed by the administrator of the tenant or is consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.```
+> **NOTE**: Sometimes even after the cluster is registered it may show an error with SignIn with the following error, you can ignore that and close the popup: AADSTS700016: Application with identifier '******************' was not found in the directory 'Azure HOL ****'. This can happen if the application has not been installed by the administrator of the tenant or is consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
 
 *******************************************************************************************************
 
@@ -148,7 +147,7 @@ Additional permissions were applied on the Windows Admin Center Azure AD applica
 
     ![Confirm Azure AD app permissions in Windows Admin Center](../media/Ex2-task2-01.2.png "Confirm Azure AD app permissions in Windows Admin Center")
 
-    > **``NOTE``** - If you don't see Microsoft Graph listed in the API permissions, you can either [re-register Windows Admin Center using steps here](#configure-windows-admin-center "re-register Windows Admin Center using steps here") for the permissions to appear correctly, or manually add the **Microsoft Graph Application.ReadWrite.All** permission. To manually add the permission:
+    > **NOTE**: If you don't see Microsoft Graph listed in the API permissions, you can either [re-register Windows Admin Center using steps here](#configure-windows-admin-center "re-register Windows Admin Center using steps here") for the permissions to appear correctly, or manually add the **Microsoft Graph Application.ReadWrite.All** permission. To manually add the permission:
 
     - Click **+ Add a permission**.
     - Select **Microsoft Graph**, then **Delegated permissions**.
@@ -168,7 +167,7 @@ Additional permissions were applied on the Windows Admin Center Azure AD applica
 
     ![Azure Arc WAC](./media/ReviewVolumes-1.png "Azure Arc WAC")
 
-2. In the Lest pane under Operations, click **Updates**.
+2. In the Lest pane under Operations, click **Updates** under Operations.
 
     ![HCI Updates](./media/Updates-1.png "HCI Updates")
 
@@ -194,8 +193,6 @@ For **AKS on Azure Stack HCI**, [Head on over to our AKS on Azure Stack HCI GitH
 Raising issues
 -----------
 This lab is based on the Azure Arc Jumpstart HCIBox: https://azurearcjumpstart.io/azure_jumpstart_hcibox/
-
-<img src="https://azurearcjumpstart.io/img/hcibox_logo.png" width="20%" height="20%">
 
 If you want to set up the lab within your own Azure subscription please follow this link: https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
 
