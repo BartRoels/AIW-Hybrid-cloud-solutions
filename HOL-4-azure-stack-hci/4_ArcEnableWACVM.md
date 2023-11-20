@@ -28,11 +28,11 @@ In this step, you will create a new Azure Resource Group and assign an extra Azu
 
 ### Create a Resource Group ###
 
-1. In the "Search resources, services, and docs" search box at the top of the Azure Portal page, type **Resource Group** and click **Resource Group** under Services.
+1. In the "Search resources, services, and docs" search box at the top of the Azure Portal page, type **Resource Group** and click **Resource Groups** under Services.
 
     ![Create Azure Resource Group](./media/azrg-1.png "Create Azure Resource Group")
     
-2. On the **Resource Group** page, click **+ Create**.
+2. On the **Resource Groups** page, click **+ Create**.
 
     ![Create Azure Resource Group](./media/azrg-2.png "Create Azure Resource Group")
 
@@ -42,7 +42,7 @@ In this step, you will create a new Azure Resource Group and assign an extra Azu
 
 ### Add a Policy to the newly created Resource Group ###
 
-1. On the **Resource Group** page, click on the resource group **ArcServers-rg**.
+1. On the **Resource Groups** page, click on the resource group **ArcServers-rg**.
 
     ![Create Azure Resource Group](./media/policy-1.png "Create Azure Resource Group")
     
@@ -77,13 +77,13 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 ### Prepare the step in Azure to onboard VM002 as an Azure Arc-enabled Virtual Machine ###
 
-1. In the "Search resources, services, and docs" search box at the top of the Azure Portal page, type **Servers** and click **Servers - Azure Arc** under Services.
+1. In the "Search resources, services, and docs" search box at the top of the Azure Portal page, type **Machines - Azure Arc** and click **Machines - Azure Arc** under Services.
 
-    ![Create Azure Resource Group](./media/vm002arc-1.png "Create Azure Resource Group")
+    ![Create Azure Resource Group](../media/hyd40.png "Create Azure Resource Group")
     
 2. On the **Azure Arc | Servers** page, Click **+ Add**
 
-    ![Create Azure Resource Group](./media/vm002arc-2.png "Create Azure Resource Group")
+    ![Create Azure Resource Group](../media/hyd40.png "Create Azure Resource Group")
 
 3. On the **Add servers with Azure Arc** page, in the **Add a single server** box, Click **Generate script**
 
