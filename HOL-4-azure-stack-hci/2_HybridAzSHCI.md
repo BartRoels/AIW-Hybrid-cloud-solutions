@@ -131,11 +131,11 @@ In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to
 
     ![Azure Arc WAC](./media/Arc-21.png "Azure Arc WAC")
 
-6. On the current page, Click **Access Control (IAM)**. 
+6. On the current page, click **Access Control (IAM)**. 
 
     ![Azure Arc WAC](./media/Arc-22.png "Azure Arc WAC")
 
-7. On the **Access control (IAM)** page, Click **+ Add** and **Add role assignment**.
+7. On the **Access control (IAM)** page, click **+ Add** and **Add role assignment**.
 
     ![Azure Arc WAC](./media/Arc-23.png "Azure Arc WAC")
 
@@ -143,7 +143,7 @@ In this step, you will prepare your Azure Stack HCI Cluster resource in Azure to
 
     ![Azure Arc WAC](./media/Arc-24.png "Azure Arc WAC")
 
-9.  On the **Add role assignment** page, under the **Members** tab, Click **"+Select members**. Click on your Azure User. Click **Select** and then Click **Next**.
+9.  On the **Add role assignment** page, under the **Members** tab, click **"+Select members**. Click on your Azure User. Click **Select** and then Click **Next**.
 
     ![Azure Arc WAC](./media/Arc-25.png "Azure Arc WAC")    
 
@@ -182,7 +182,7 @@ At this time you should still be having the following page active in the Azure P
 
 ### Explore Extensions ###
 
-1. On the **Extension** page, you see that both Azure Stack HCI Cluster nodes have the **(Windows) Admin Center agent** installed. This was enabled by the steps we took in Task 1.
+1. On the **Extension** page, you see that Azure Stack HCI Cluster nodes have the **(Windows) Admin Center agent** installed. This was enabled by the steps we took in Task 1.
 
     ![Azure Arc WAC](./media/Arc-16.png "Azure Arc WAC")
 

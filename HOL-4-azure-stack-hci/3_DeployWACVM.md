@@ -35,7 +35,7 @@ In this step, you'll review a volume on the Azure Stack HCI 22H2 cluster by usin
 
     ![Review the existing volumes for VMs](./media/ReviewVolumes-1.png "WAC Review HCI cluster Volumes")
         
-2. On the left hand navigation, under **Cluster resources** select **Volumes**.  The central **Volumes** page shows you a total of two volumes.
+2. On the left-hand navigation, under **Cluster resources** select **Volumes**.  The central **Volumes** page shows you a total of two volumes.
 
     ![Review the existing volumes for VMs](./media/ReviewVolumes-2.png "WAC Review HCI cluster Volumes")
     
@@ -121,7 +121,7 @@ In this step, you will deploy a Windows Server 2022 virtual machine via the Wind
 
 1. Once logged into the **Windows Admin Center** on the **AdminCenter** VM, click on your previously deployed cluster, **hciboxcluster.jumpstart.local**
 
-2. On the left hand navigation, under **Cluster Resources** select **Virtual machines**.  The central **Virtual machines** page shows that there are some virtual machines already running.
+2. On the left-hand navigation, under **Cluster Resources** select **Virtual machines**.  The central **Virtual machines** page shows that there are some virtual machines already running.
     
     ![Create VM](./media/vm001-1.png "Create VM on Azure Stack HCI 22H2")
 
@@ -129,7 +129,7 @@ In this step, you will deploy a Windows Server 2022 virtual machine via the Wind
 
     ![Create VM](./media/vm001-2.png "Create VM on Azure Stack HCI 22H2")
 
-4. In the **New virtual machine** pane, enter **VM001** for the name, and enter the following pieces of information, then click **Create**
+4. In the **New virtual machine** pane, enter **VM001** for the name, and enter the following pieces of information, then click **Create**.
  
      * Generation: **Generation 2 (Recommended)**
      * Host: **Leave as recommended**
@@ -145,7 +145,7 @@ In this step, you will deploy a Windows Server 2022 virtual machine via the Wind
       
     ![Create VM](./media/vm001-4.png "Create VM on Azure Stack HCI 22H2")
  
-5. The creation process will take a few moments, and once complete, VM001 should show within the Virtual machine view
+5. The creation process will take a few moments, and once complete, VM001 should show within the Virtual machine view.
 
 6. Click on the checkbox before VM001 and then click on **Power** and select **Start** - within moments, the VM should be running.
 
@@ -168,7 +168,7 @@ In this step, you will deploy a Windows Server 2022 virtual machine via the Wind
   
     ![Create VM](./media/vm001-9.png "Create VM on Azure Stack HCI 22H2") 
  
-11. The VM will be in the UEFI boot summary as below
+11. The VM will be in the UEFI boot summary as below.
  
     ![Create VM](./media/vm001-10.png "Create VM on Azure Stack HCI 22H2") 
  
@@ -176,9 +176,9 @@ In this step, you will deploy a Windows Server 2022 virtual machine via the Wind
  
     ![Create VM](./media/vm001-11.png "Create VM on Azure Stack HCI 22H2") 
  
-13. From there you'll start the OOBE experience. Select the following settings according to your preferences: Language, Time currency and Keyboard. Click **Next**
+13. From there you'll start the OOBE experience. Select the following settings according to your preferences: Language, Time currency and Keyboard. Click **Next**.
 
-14. Click Install Now, and select the version Windows Server 2022 Standard Evaluation (Desktop Experience). Click **Next**
+14. Click Install Now and select the version Windows Server 2022 Standard Evaluation (Desktop Experience). Click **Next**
  
     ![Create VM](./media/vm001-12.png "Create VM on Azure Stack HCI 22H2") 
  
@@ -203,7 +203,7 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
 
 1. Once logged into the **Windows Admin Center** on the **AdminCenter** VM, click on cluster, **hciboxcluster.jumpstart.local**
 
-2. On the left hand navigation, under **Cluster Resources** select **Virtual machines**.  The central **Virtual machines** page shows that there are some virtual machines already running.
+2. On the left-hand navigation, under **Cluster Resources** select **Virtual machines**.  The central **Virtual machines** page shows that there are some virtual machines already running.
     
     ![Create VM](./media/vm002-1.png "Create VM on Azure Stack HCI 22H2")
 
@@ -211,7 +211,7 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
 
     ![Create VM](./media/vm002-2.png "Create VM on Azure Stack HCI 22H2")
 
-4. In the **New virtual machine** pane, enter **VM002** for the name, and enter the following pieces of information, then click **Create**
+4. In the **New virtual machine** pane, enter **VM002** for the name, and enter the following pieces of information, then click **Create**.
 
  
      * Generation: **Generation 2 (Recommended)**
@@ -230,13 +230,13 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
     ![Create VM](./media/vm002-4.png "Create VM on Azure Stack HCI 22H2")
  
  
-5. The creation process will take a few moments, and once complete, VM002 should show within the Virtual machine view
+5. The creation process will take a few moments, and once complete, VM002 should show within the Virtual machine view.
 
-6. Click on the VM name **VM002** and then Click on **Settings** to view all VM properties. Click on **Security**
+6. Click on the VM name **VM002** and then Click on **Settings** to view all VM properties. Click on **Security**.
  
     ![Create VM](./media/vm002-4a.png "Create VM on Azure Stack HCI 22H2")
 
-7. Make sure to change the Secure Boot template to "Microsoft UEFI Certificate Authority" in the Template drop-down box, and click **Save security settings**. DO NOT CLICK **Close**.
+7. Make sure to change the Secure Boot template to "Microsoft UEFI Certificate Authority" in the Template drop-down box and click **Save security settings**. DO NOT CLICK **Close**.
 
     ![Create VM](./media/vm002-4b.png "Create VM on Azure Stack HCI 22H2")
 
@@ -315,7 +315,7 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Win
 
     ![Create VM](./media/vm002-19.png "Create VM on Azure Stack HCI 22H2")
 
-11. On the "SSH setup" screen, select "Install openSSH server" and select **Done**.
+11. On the "SSH setup" screen, select "Install OpenSSH server" and select **Done**.
 
     ![Create VM](./media/vm002-20.png "Create VM on Azure Stack HCI 22H2")
 
