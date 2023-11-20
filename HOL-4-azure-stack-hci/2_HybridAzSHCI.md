@@ -1,4 +1,4 @@
-﻿HOL-4: Exercise 2: Azure Stack HCI 22H2 Hybrid by design
+HOL-4: Exercise 2: Azure Stack HCI 22H2 Hybrid by design
 ==============
 Overview
 -----------
