@@ -2,7 +2,7 @@ HOL-4: Exercise 3: Deploying Virtual Machines on your Azure Stack HCI 22H2 via t
 ==============
 Overview
 -----------
-Now you have looked a both the Integration and Hybrid capabilities of Azure Stack HCI and Azure, you can now start looking at deploying some workloads on the Azure Stack HCI Cluster leveraging the Windows Admin Center.
+Now you have looked a both the Integration and Hybrid capabilities of Azure Stack HCI and Azure, you can start looking at deploying some workloads on the Azure Stack HCI Cluster leveraging the Windows Admin Center.
 
 Contents
 -----------
@@ -34,13 +34,12 @@ In this step, you'll review a volume on the Azure Stack HCI 22H2 cluster by usin
 1. Open **Windows Admin Center** on the **AdminCenter** VM. On the top left click on **All connections** and click on your previously deployed cluster, **hciboxcluster.jumpstart.local**
 
     ![Review the existing volumes for VMs](./media/ReviewVolumes-1.png "WAC Review HCI cluster Volumes")
-    
         
-2. On the left hand navigation, under **Cluster resources** select **Volumes**.  The central **Volumes** page shows you a total of two volumes
+2. On the left hand navigation, under **Cluster resources** select **Volumes**.  The central **Volumes** page shows you a total of two volumes.
 
     ![Review the existing volumes for VMs](./media/ReviewVolumes-2.png "WAC Review HCI cluster Volumes")
     
-3. On the **Volumes** page, select the **Inventory** tab
+3. On the **Volumes** page, select the **Inventory** tab.
 
     ![Review the existing volumes for VMs](./media/ReviewVolumes-3.png "WAC Review HCI cluster Volumes")
     
@@ -77,14 +76,14 @@ Task 2: Download .Iso files
 -----------
 In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .Iso file and upload the .Iso to your Clustered Shared Volume you explored in Task 1. 
 
-> **``TIP:``**  Make sure to use the Edge browser on the **AdminCenter** VM to execute the following steps. Right click on the **here**, click **copy link**, and paste in the Edge browser on **AdminCenter** VM.
+> **``TIP:``**  Make sure to use the Edge browser on the **AdminCenter** VM to execute the following steps. Right-click on the **here**, click **copy link**, and paste in the Edge browser on **AdminCenter** VM.
 
 ## Download the .ISO files ##
 ### Download a Windows Server 2022 .Iso ###
 
-1. Please download Windows Server 2022 image file from [here](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022)
+1. Please download the Windows Server 2022 image file from [here](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022)
  
-2. In the English (United States) row select the Click **64-bit edition** in the ISO downloads row. Download the .iso which will be by saved in the Downloads folder.
+2. In the English (United States) row select the Click **64-bit edition** in the ISO downloads row. Download the .iso which will be saved in the Downloads folder.
 
 ### Download an Ubuntu Server 22.04 .Iso ### 
  
@@ -111,7 +110,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
   
     ![Upload .Iso files](./media/Upload-3.png "Upload .Iso files")
  
-5. Click **Upload**. Click **Select Files**, search and select both (Windows Server 2022 and Ubuntu Server 22.04) .iso files in the Downloads directory and click **Open**, and then click **Submit**. 
+5. Click **Upload**. Click **Select Files**, search and select both (Windows Server 2022 and Ubuntu Server 22.04) .iso files in the Downloads directory click **Open**, and then click **Submit**. 
  
     ![Upload .Iso files](./media/Upload-4.png "Upload .Iso files")
   
@@ -119,7 +118,7 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 Task 3: Deploy a Windows Server 2022 virtual machine
 ----- 
-In this step, you will deploy a Windows Server 2022 virtual machine via Windows Admin Center.
+In this step, you will deploy a Windows Server 2022 virtual machine via the Windows Admin Center.
 
 1. Once logged into the **Windows Admin Center** on the **AdminCenter** VM, click on your previously deployed cluster, **hciboxcluster.jumpstart.local**
 
@@ -147,7 +146,7 @@ In this step, you will deploy a Windows Server 2022 virtual machine via Windows 
       
     ![Create VM](./media/vm001-4.png "Create VM on Azure Stack HCI 22H2")
  
-5. The creation process will take a few moments, and once complete, VM001 should show within the Virtual machines view
+5. The creation process will take a few moments, and once complete, VM001 should show within the Virtual machine view
 
 6. Click on the checkbox before VM001 and then click on **Power** and select **Start** - within moments, the VM should be running.
 
@@ -162,7 +161,7 @@ In this step, you will deploy a Windows Server 2022 virtual machine via Windows 
  
     ![Create VM](./media/vm001-vlan200.png "Create VM on Azure Stack HCI 22H2")
 
-9. Click on Connect and select connect button from the drop down.
+9. Click on Connect and select the Connect button from the drop-down.
 
     ![Create VM](./media/vm001-8.png "Create VM on Azure Stack HCI 22H2")
  
@@ -174,7 +173,7 @@ In this step, you will deploy a Windows Server 2022 virtual machine via Windows 
  
     ![Create VM](./media/vm001-10.png "Create VM on Azure Stack HCI 22H2") 
  
-12. Click in "Send Ctrl + Alt + Del" at the top of the page now and press any key when you see the message "Press any key at boot from CD or DVD…"
+12. Click on "Send Ctrl + Alt + Del" at the top of the page now and press any key when you see the message "Press any key at boot from CD or DVD…"
  
     ![Create VM](./media/vm001-11.png "Create VM on Azure Stack HCI 22H2") 
  
@@ -186,22 +185,22 @@ In this step, you will deploy a Windows Server 2022 virtual machine via Windows 
  
 15. Accept the license terms. Click **Next**. Select "Custom: Install Windows only (advanced)" and then Next. It will take around 10 minutes for the VM to boot. After that, please insert the lab credentials **ArcPassword123!!** and your VM is ready to go!
 
-16. Once the virtual machine is up and running try to login!
+16. Once the virtual machine is up and running try to log in!
     
     If everything went well your Windows Server should now receive a proper IPv4 Address.
 
 <!--
-> **``NOTE``** You will notice that the VM did not received a proper IPv4 address from the DHCP server. If you want to fix this you can open the VM001 settings page and under Networking you can change the VLAN ID from 2 to 200. 
+> **``NOTE``** You will notice that the VM did not receive a proper IPv4 address from the DHCP server. If you want to fix this you can open the VM001 settings page and under Networking, you can change the VLAN ID from 2 to 200. 
 
 ![Create VM](./media/vm001-vlan200.png "Create VM on Azure Stack HCI 22H2") 
 
 -->
 
-You just finalized the installation of a new Window Server 2022 VM on your Azure Stack HCI Cluster. Please proceed to the next Task.
+You just finalized the installation of a new Windows Server 2022 VM on your Azure Stack HCI Cluster. Please proceed to the next Task.
 
 Task 4: Deploy an Ubuntu Server 22.04 virtual machine
 ----- 
-In this step, you will deploy an Ubuntu Server 22.04 virtual machine via Windows Admin Center.
+In this step, you will deploy an Ubuntu Server 22.04 virtual machine via the Windows Admin Center.
 
 1. Once logged into the **Windows Admin Center** on the **AdminCenter** VM, click on cluster, **hciboxcluster.jumpstart.local**
 
@@ -232,13 +231,13 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via Windows
     ![Create VM](./media/vm002-4.png "Create VM on Azure Stack HCI 22H2")
  
  
-5. The creation process will take a few moments, and once complete, VM002 should show within the Virtual machines view
+5. The creation process will take a few moments, and once complete, VM002 should show within the Virtual machine view
 
 6. Click on the VM name **VM002** and then Click on **Settings** to view all VM properties. Click on **Security**
  
     ![Create VM](./media/vm002-4a.png "Create VM on Azure Stack HCI 22H2")
 
-7. Make sure to change the Secure Boot template to "Microsoft UEFI Certificate Authority" in the Template drop down box, and click **save security settings**. DO NOT CLICK **Close**.
+7. Make sure to change the Secure Boot template to "Microsoft UEFI Certificate Authority" in the Template drop-down box, and click **save security settings**. DO NOT CLICK **Close**.
 
     ![Create VM](./media/vm002-4b.png "Create VM on Azure Stack HCI 22H2")
 
@@ -258,46 +257,45 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via Windows
     ![Create VM](./media/vm002-7.png "Create VM on Azure Stack HCI 22H2")
     
 
-8. Click on Connect and select connect button from the drop down.
+8. Click on Connect and select the Connect button from the drop-down.
 
     ![Create VM](./media/vm002-8.png "Create VM on Azure Stack HCI 22H2")
  
 9.  Fill in the Username **arcdemo@jumpstart.local** and password **ArcPassword123!!**. Before clicking on **Connect** first make sure to click the checkbox before "Automatically connect with the certificate presented by this machine", when you receive the certificate prompt, click **Confirm**. Now click **Connect**.
   
-    ![Create VM](./media/vm002-9.png "Create VM on Azure Stack HCI 22H2") 
- 
+    ![Create VM](./media/vm002-9.png "Create VM on Azure Stack HCI 22H2")  
 
 1. Once the integrity check is done you will be able to select your language. Select **English**.
 
     ![Create VM](./media/vm002-10.png "Create VM on Azure Stack HCI 22H2") 
 
-1. On the "Installer update available" page, select **Update to the new installer** and ENTER
+1. On the "Installer update available" page, select **Update to the new installer** and ENTER.
 
     ![Create VM](./media/vm002-9a.png "Create VM on Azure Stack HCI 22H2")
 
-1. On the "Keyboard configuration" page, select **Done** and ENTER
+1. On the "Keyboard configuration" page, select **Done** and ENTER.
 
     ![Create VM](./media/vm002-11.png "Create VM on Azure Stack HCI 22H2")
 
-1. On the "Choose type of install" page, select **Done** and ENTER
+1. On the "Choose type of install" page, select **Done** and ENTER.
 
     ![Create VM](./media/vm002-12.png "Create VM on Azure Stack HCI 22H2") 
 
-2. On the "Network connections" page, select **Done** and ENTER
+2. On the "Network connections" page, select **Done** and ENTER.
    
    **NOTE:** Make sure you see an IP on the DHCPv4 line!
 
     ![Create VM](./media/vm002-13.png "Create VM on Azure Stack HCI 22H2") 
 
-3. On the "Configure Proxy" page, select **Done** and ENTER
+3. On the "Configure Proxy" page, select **Done** and ENTER.
 
     ![Create VM](./media/vm002-14.png "Create VM on Azure Stack HCI 22H2")
 
-3. On the "Configure Ubuntu archive mirror" page, select **Done** and ENTER
+3. On the "Configure Ubuntu archive mirror" page, select **Done** and ENTER.
 
     ![Create VM](./media/vm002-15.png "Create VM on Azure Stack HCI 22H2") 
 
-7. On the "Guided storage configuration" page, select **Done** and ENTER
+7. On the "Guided storage configuration" page, select **Done** and ENTER.
 
     ![Create VM](./media/vm002-16.png "Create VM on Azure Stack HCI 22H2")
 
@@ -305,7 +303,7 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via Windows
 
     ![Create VM](./media/vm002-17.png "Create VM on Azure Stack HCI 22H2")
 
-9.  On the Profile setup screen complete the fields a below and then select **Done** and ENTER
+9.  On the Profile setup screen complete the fields below and then select **Done** and ENTER
      * Your name: arcdemo
      * Your server's name: vm002
      * Pick a username: arcdemo
@@ -314,41 +312,41 @@ In this step, you will deploy an Ubuntu Server 22.04 virtual machine via Windows
 
     ![Create VM](./media/vm002-18.png "Create VM on Azure Stack HCI 22H2")
 
-10. On the "Upgrade to Ubuntu Pro" screen, select **Continue** and ENTER
+10. On the "Upgrade to Ubuntu Pro" screen, select **Continue** and ENTER.
 
     ![Create VM](./media/vm002-19.png "Create VM on Azure Stack HCI 22H2")
 
-11. On the "SSH setup" screen, select "Install openSSH server" and select **Done**
+11. On the "SSH setup" screen, select "Install openSSH server" and select **Done**.
 
     ![Create VM](./media/vm002-20.png "Create VM on Azure Stack HCI 22H2")
 
-12. On the "Featured Server snaps" screen, select **Done**
+12. On the "Featured Server Snaps" screen, select **Done**.
 
     ![Create VM](./media/vm002-21.png "Create VM on Azure Stack HCI 22H2")
 
-13. Now wait until you get the "Install complete!" screen and select **Reboot Now** and ENTER
+13. Now wait until you get the "Install complete!" screen and select **Reboot Now** and ENTER.
 
-15. Once the virtual machine is up and running try to login!
+15. Once the virtual machine is up and running try to log in!
 
 
 Task 5: Live migrate a virtual machine to another node
 ----- 
 
-The final step we'll cover is using Windows Admin Center to live migrate VM002 from it's current node, to an alternate node in the cluster.
+The final step we'll cover is using Windows Admin Center to live to migrate VM002 from its current node to an alternate node in the cluster.
 
-1. Still within the **Windows Admin Center** on **AdminCenter** VM, under **Cluster Resources**, click on **Virtual machines**
+1. Still within the **Windows Admin Center** on **AdminCenter** VM, under **Cluster Resources**, click on **Virtual machines**.
 
-2. On the **Virtual machines** page, select the **Inventory** tab
+2. On the **Virtual machines** page, select the **Inventory** tab.
 
-3. Under **Host server**, make a note of the node that VM002 is currently running on.  You may need to expand the column width to see the name
+3. Under **Host server**, make a note of the node that VM002 is currently running on.  You may need to expand the column width to see the name.
 
     ![Create VM](./media/LiveMigrate-1.png "Create VM on Azure Stack HCI 22H2")
 
-4. Next to **VM002**, click the tick box next to VM002, then click **More**.  You'll notice you can Clone, Domain Join and also Move the VM. Click **Move**
+4. Next to **VM002**, click the tick box next to VM002, then click **More**.  You'll notice you can Clone, Domain Join and also Move the VM. Click **Move**.
 
     ![Create VM](./media/LiveMigrate-2.png "Create VM on Azure Stack HCI 22H2")
 
-5. Next to **VM002**, click the tick box next to VM002, then click **More**.  You'll notice you can Clone, Domain Join and also Move the VM. Click **Move**    
+5. Next to **VM002**, click the tick box next to VM002, then click **More**.  You'll notice you can Clone, Domain Join and also Move the VM. Click **Move**.
 
     ![Create VM](./media/LiveMigrate-3.png "Create VM on Azure Stack HCI 22H2")
 
@@ -358,7 +356,7 @@ You've successfully moved a running VM without downtime using the Windows Admin 
 
 Summary
 -----------
-In this exercise, you have been exploring the existing Cluster Shared Volume which was created for you on Azure Stack HCI cluster. You also looked at more details and options related to the Volumes you can create in Azure Stack HCI. In Task 2 you downloaded some ISO files which you have used in Task 3 and Task 4 to respectively deployed a Windows Server 2022 VM and an Ubuntu 22.04 VM on the Azure Stack HCI Cluster. You finished this exercise by testing a Live migration of the Linux based VM to another available Azure Stack HCI Cluster node.
+In this exercise, you have been exploring the existing Cluster Shared Volume which was created for you on the Azure Stack HCI cluster. You also looked at more details and options related to the Volumes you can create in Azure Stack HCI. In Task 2 you downloaded some ISO files which you have used in Task 3 and Task 4 to respectively deploy a Windows Server 2022 VM and an Ubuntu 22.04 VM on the Azure Stack HCI Cluster. You finished this exercise by testing a Live migration of the Linux-based VM to another available Azure Stack HCI Cluster node.
 
 With this completed, you can now move on to the next exercise.
 
@@ -376,6 +374,6 @@ This lab is based on the Azure Arc Jumpstart HCIBox: https://azurearcjumpstart.i
 
 <img src="https://azurearcjumpstart.io/img/hcibox_logo.png" width="20%" height="20%">
 
-If you want to setup the lab within your own Azure subscription please follow this link : https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
+If you want to set up the lab within your own Azure subscription please follow this link: https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
 
 If you notice something is wrong with this guide, such as a step isn't working, or something just doesn't make sense - help us to make this guide better!
