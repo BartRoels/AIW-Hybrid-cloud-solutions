@@ -2,7 +2,7 @@
 ==============
 Overview
 -----------
-You used have deployed some virtual machines on the Azure Stack HCI Cluster leveraging the Windows Admin Center, it is now time to Arc-enable those assets and look at the Azure Arc-enabled Server capabilities.
+You have deployed some virtual machines on the Azure Stack HCI Cluster leveraging the Windows Admin Center, it is now time to Arc-enable those assets and look at the Azure Arc-enabled Server capabilities.
 
 Contents
 -----------
@@ -24,7 +24,7 @@ Contents
 
 Task 1: Prepare your Azure environment before onboarding your Azure Arc-enabled Virtual Machine.
 -----------
-In this step, you will create a new Azure Resource Group and assign an extra Azure Policy to this Resource Group
+In this step, you will create a new Azure Resource Group and assign an extra Azure Policy to this Resource Group.
 
 ### Create a Resource Group ###
 
@@ -54,7 +54,7 @@ In this step, you will create a new Azure Resource Group and assign an extra Azu
 
     ![Create Azure Resource Group](./media/policy-3.png "Create Azure Resource Group")
 
-4. On the **Assign policy** page, click on the 3 dots on right of the **Policy definition** field. On the **Available Definitions** page, type in search field **Configure periodic checking for missing system updates on azure Arc-enabled servers**. select the policy found below under the Policy Name, **[Preview]: Configure periodic checking for missing system updates on azure Arc-enabled servers**. Click **Add**.
+4. On the **Assign policy** page, click on the 3 dots on the right of the **Policy definition** field. On the **Available Definitions** page, type in the search field **Configure periodic checking for missing system updates on Azure Arc-enabled servers**. select the policy found below under the Policy Name, **[Preview]: Configure periodic checking for missing system updates on Azure Arc-enabled servers**. Click **Add**.
 
     ![Create Azure Resource Group](./media/policy-4.png "Create Azure Resource Group")
 
@@ -66,7 +66,7 @@ In this step, you will create a new Azure Resource Group and assign an extra Azu
 
     ![Create Azure Resource Group](./media/policy-6.png "Create Azure Resource Group")
 
-7. After a couple of minutes you should see an extra Policy assigment popping up in the list of Assigned Policies.
+7. After a couple of minutes you should see an extra Policy assignment popping up in the list of Assigned Policies.
 
     ![Create Azure Resource Group](./media/policy-7.png "Create Azure Resource Group")
 
@@ -98,11 +98,11 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
     ![Create Azure Resource Group](./media/vm002arc-5.png "Create Azure Resource Group")
 
 6. On the **Add servers with Azure Arc** page, on the *Tags* tab, Click **NEXT**
-   > **``NOTE``** If you want you can of course add an Cutsom tag, but best practice is that you do this via Azure Policies.
+   > **``NOTE``** If you want you can of course add a Cutsom tag, but best practice is that you do this via Azure Policies.
 
     ![Create Azure Resource Group](./media/vm002arc-6.png "Create Azure Resource Group")
 
-7. On the **Add servers with Azure Arc** page, on the *Download and run script* tab, Click **Download** (You later can find it your Downloads folder). Click **Close**.
+7. On the **Add servers with Azure Arc** page, on the *Download and run script* tab, Click **Download** (You later can find it in your Downloads folder). Click **Close**.
    
     ![Create Azure Resource Group](./media/vm002arc-7.png "Create Azure Resource Group")
 
@@ -118,21 +118,21 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 3. In the **Command Prompt** window, type **scp "C:\Users\arcdemo\Downloads\OnboardingScript.sh" arcdemo@192.168.200.211:OnboardingScript.sh** and **ENTER**. Type the Password ***ArcPassword123!!*** and **ENTER**. By doing this we will copy the Azure Arc-enabled Server Onboarding Script **OnboardingScript.sh** to VM002.
 
-    > **``NOTE``** Make sure to change the ip address accordingly to your environment!
+    > **``NOTE``** Make sure to change the IP address according to your environment!
  
     ![](./media/vm002arc-10.png "")
 
 4. In the **Command Prompt** window, type **ssh arcdemo@192.168.200.211** and **ENTER**. Type the Password ***ArcPassword123!!*** and **ENTER**. You now SSHed into the VM002 Virtual Machine.
 
-    > **``NOTE``** Make sure to change the ip address accordingly to your environment!
+    > **``NOTE``** Make sure to change the IP address according to your environment!
  
     ![](./media/vm002arc-11.png "")
 
-5. In the **Command Prompt** window, type **ls** and **ENTER**. You now should see the uploaded Azure Arc-enabled Server Onboarding script **OnboardingScript.sh**. Next start the Onboarding Script by typing **bash ~/OnboardingScript.sh** and **ENTER**. If asked provide the Password **ArcPassword123!!** adn **ENTER**
+5. In the **Command Prompt** window, type **ls** and **ENTER**. You now should see the uploaded Azure Arc-enabled Server Onboarding script **OnboardingScript.sh**. Next start the Onboarding Script by typing **bash ~/OnboardingScript.sh** and **ENTER**. If asked provide the Password **ArcPassword123!!** and **ENTER**
  
     ![](./media/vm002arc-12.png "")
 
-6. When you receive the below screen, double click on the code and then click on your right mouse button to put the code on your Clipboard.
+6. When you receive the below screen, double-click on the code and then click on your right mouse button to put the code on your Clipboard.
  
     ![](./media/vm002arc-13.png "")
 
@@ -160,12 +160,12 @@ In this step, you will download a Windows Server 2022 and Ubuntu Server 22.04 .I
 
 12. On the **vm002** page, click **Policies**.
     
-    Do you remember that you assigned an Azure Policy to the Resource Group **ArcServers-rg** in the beginning of this exercise? 
-    Now you can check if this Azure policy was successfully assigned to VM002 we added to that ReSource Group.
+    Do you remember that you assigned an Azure Policy to the Resource Group **ArcServers-rg** at the beginning of this exercise? 
+    Now you can check if this Azure policy was successfully assigned to VM002 we added to that Resource Group.
 
     ![](./media/vm002arc-20.png "")
 
-13. Like you will notice the policy was successfully assigned. This is just an example of the power of using Azure Policies. Imagine what you all can automate just by leveraging Azure Policies, not only for Compliance, regulations, Privacy, ... checks
+13. As you will notice the policy was successfully assigned. This is just an example of the power of using Azure Policies. Imagine what you all can automate just by leveraging Azure Policies, not only for Compliance, regulations, Privacy, ... checks
 
     > **``NOTE``** This can take a while, so if the "Compliance state" column is stating "Not Started", grab a coffee and check again later (+- 5 minutes).
         
@@ -176,13 +176,13 @@ Task 3: Leverage the Azure AD RBAC controls to securely connect to VM002 via the
 ----- 
 In this step, you will prepare the Azure Connected Machine agent on the VM002 to securely connect to VM002
 
-## Prepare  the Azure Connected Machine agent confiruration on the VM002 ##
+## Prepare  the Azure Connected Machine agent configuration on the VM002 ##
 
 1. On **AdminCenter** VM,  type **CMD** in the searchbox (right from Start) and then **ENTER**. Right-click the Command Prompt, and click **Run as Administrator**.
  
     ![](./media/vm002arc-8.png "")
 
-2. When receiving a **User Account Control** popup screen Click **Yes**
+2. When receiving a **User Account Control** popup screen Click **Yes**.
  
     ![](./media/vm002arc-9.png "")
 
@@ -194,7 +194,7 @@ In this step, you will prepare the Azure Connected Machine agent on the VM002 to
  
     ![](./media/ssh-1.png "")
 
-5. In the **Command Prompt** window, type **azcmagent config list** and **ENTER**. You will notice that the configuration of the incomfingconnections.ports value is empty
+5. In the **Command Prompt** window, type **azcmagent config list** and **ENTER**. You will notice the configuration of the incomingconnections.ports value is empty
 
     ![](./media/ssh-2.png "")
 
@@ -210,7 +210,7 @@ In this step, you will prepare the Azure Connected Machine agent on the VM002 to
 
     ![](./media/ssh-5.png "")
 
-9. If all went well you should have established a SSH connection from within the Azure Portal to your on-premises Azure Arc-enabled Virtual Machine, for example on an Azure Stack HCI.
+9. If all went well you should have established an SSH connection from within the Azure Portal to your on-premises Azure Arc-enabled Virtual Machine, for example on an Azure Stack HCI.
 
     > **``NOTE``** Learn more : https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-overview    
 
@@ -219,9 +219,8 @@ In this step, you will prepare the Azure Connected Machine agent on the VM002 to
     
 Summary
 -----------
-In this exercise, you have been preparing and onboarding an on-premises Virtual Machine into the Azure control plane, leveraging the Azure Arc-enabled Server solution. We combined this onboarding with a quick look what the power of Azure Policies can bring to you.
+In this exercise, you have been preparing and onboarding an on-premises Virtual Machine into the Azure control plane, leveraging the Azure Arc-enabled Server solution. We combined this onboarding with a quick look at what the power of Azure Policies can bring to you.
 You finished this exercise by setting up and testing the new SSH access to Azure Arc-enabled servers.
-
 
 With this completed, you can now move on to the next exercise.
 
@@ -239,6 +238,6 @@ This lab is based on the Azure Arc Jumpstart HCIBox: https://azurearcjumpstart.i
 
 <img src="https://azurearcjumpstart.io/img/hcibox_logo.png" width="20%" height="20%">
 
-If you want to setup the lab within your own Azure subscription please follow this link : https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
+If you want to set up the lab within your own Azure subscription please follow this link: https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
 
 If you notice something is wrong with this guide, such as a step isn't working, or something just doesn't make sense - help us to make this guide better!
