@@ -46,7 +46,7 @@ In this step, you will review the status of the Azure Arc services on the Azure 
    - **Connected** under the Azure connection status for every Server.
        
 
-    ![Azure Arc WAC](./media/Arc-2.png "Azure Arc WAC")
+        ![Azure Arc WAC](./media/Arc-2.png "Azure Arc WAC")
     
 4. Now click **Arc-enabled servers** on the current **Azure Arc | Azure Stack HCI registration** page
   
@@ -70,33 +70,14 @@ In this step, you will review the status of the Azure Arc services on the Azure 
 
 9. The Azure Portal will open in an extra browser Tab, showing you the **AzurestackHCI** resource group content. On the **Resources** page in the Azure Portal, click on the **HCIBox-Cluster**.
 
-    > **``NOTE``** You potentially will be asked to provide the Azure credentials. You can find them in the Environment Details of this Lab. If you get an "Action Required" screen, click "Ask later".
+    > **NOTE**: You potentially will be asked to provide the Azure credentials. You can find them in the Environment Details of this Lab. If you get an "Action Required" screen, click "Ask later".
 
     ![Azure Arc WAC](./media/Arc-5.png "Azure Arc WAC")
 
-1.  The Azure Portal will open the HCIBox-Cluster - Azure Stack HCI blade. Click **Capabilities** and
+10.  The Azure Portal will open the HCIBox-Cluster - Azure Stack HCI blade. Click **Capabilities**.
 
-    ![Azure Arc WAC](./media/Arc-6.png "Azure Arc WAC")
+        ![Azure Arc WAC](./media/Arc-6.png "Azure Arc WAC")
 
-<!--
-11. On the **Capabilities** tab, click **Insights**
-
-    ![Azure Arc WAC](./media/Arc-7.png "Azure Arc WAC")    
-
-12. On the **Configure extension: MicrosoftMonitoringAgent** page, click **Add**.
-
-    > **``NOTE``** All existing Log Analytics Workplace fields should be pre-filled automatically.
-    
-    ![Azure Arc WAC](./media/Arc-8.png "Azure Arc WAC")
-
-13. On the **Capabilities** tab, click **Insights**
-
-    ![Azure Arc WAC](./media/Arc-9.png "Azure Arc WAC")    
-
-14. On the **Azure Insights** page, click **Turn On**.
-    
-    ![Azure Arc WAC](./media/Arc-10.png "Azure Arc WAC")
--->
 15. On the **Capabilities** tab, click **Windows Admin Center**
 
     ![Azure Arc WAC](./media/Arc-11.png "Azure Arc WAC")    
@@ -115,11 +96,11 @@ In this step, you will review the status of the Azure Arc services on the Azure 
   
       ![Azure Arc WAC](./media/Arc-14.png "Azure Arc WAC")    
 
-You just finalized the Activation of a couple of Hybrid features of Azure Stack HCI.
+    You just finalized the Activation of a couple of Hybrid features of Azure Stack HCI.
 
-> **``NOTE``** We skipped configuring Insights as the Cluster nodes need to be updated to the May 2023 updates.
+    > **``NOTE``** We skipped configuring Insights as the Cluster nodes need to be updated to the May 2023 updates.
 
-Once the Windows Admin Center box shows **Configured** proceed to the next Task.
+    Once the Windows Admin Center box shows **Configured** proceed to the next Task.
 
 Task 2: Manage Azure Stack HCI clusters using Windows Admin Center in Azure
 -----------
@@ -328,8 +309,6 @@ For **AKS on Azure Stack HCI**, [Head on over to our AKS on Azure Stack HCI GitH
 Raising issues
 -----------
 This lab is based on the Azure Arc Jumpstart HCIBox: https://azurearcjumpstart.io/azure_jumpstart_hcibox/
-
-<img src="https://azurearcjumpstart.io/img/hcibox_logo.png" width="20%" height="20%">
 
 If you want to set up the lab within your own Azure subscription please follow this link: https://azurearcjumpstart.io/azure_jumpstart_hcibox/#deployment-options-and-automation-flow
 
